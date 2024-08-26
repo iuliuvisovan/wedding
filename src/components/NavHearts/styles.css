@@ -27,3 +27,13 @@
     }
   }
 }
+
+.hearts-gradient {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 70px;
+  height: 230px;
+  background: linear-gradient(-80deg, #0002, #0000, #ffbf0000);
+  z-index: 9;
+}

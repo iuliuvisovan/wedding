@@ -1,0 +1,29 @@
+.hearts-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: fixed;
+  bottom: 14px;
+  right: 10px;
+  z-index: 10;
+
+  .heart {
+    line-height: 0.7em;
+    height: 14px;
+    width: 16px;
+    overflow-x: hidden;
+    filter: saturate(1.5);
+
+    &.selected {
+      img {
+        transform: translateY(-14px);
+        opacity: 1;
+      }
+    }
+
+    img {
+      width: 100%;
+      opacity: 0.6;
+    }
+  }
+}

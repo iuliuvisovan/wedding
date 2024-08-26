@@ -7,22 +7,38 @@ const transforms = {
   1: 'scale(1.1)',
 };
 
+let intervalRef;
+
 export default function LandingPage() {
   // randomly select an image and remove all transforms from it, using react
   // state to force re-render
   const [selectedImageIndex, setSelectedImageIndex] = useState();
+  const [secondImageIndex, setSecondImageIndex] = useState();
 
   useEffect(() => {
-    // colorizeRandomImage();
+    clearInterval(intervalRef);
+
+    intervalRef = setInterval(() => {
+      console.log('Setting interval');
+
+      highlightRandomImage();
+    }, 2000);
   }, []);
 
-  const colorizeRandomImage = async () => {
+  const highlightRandomImage = async () => {
+    const randomDuration = Math.floor(Math.random() * 1000);
+
+    await wait(randomDuration);
+
     const randomIndex = Math.floor(Math.random() * 30);
 
     setSelectedImageIndex(randomIndex);
-    const randomDuration = Math.floor(Math.random() * 3000);
-    await wait(randomDuration);
-    colorizeRandomImage();
+
+    const randomIndexTwo = Math.floor(Math.random() * 30);
+
+    await wait(300)
+
+    setSecondImageIndex(randomIndexTwo);
   };
 
   return (
@@ -33,9 +49,9 @@ export default function LandingPage() {
         <div className="title">
           <div className="and-symbol">&</div>
           <div className="name-word on-top iuliu">Iuliu</div>
-          <div className="name-word">Iuliu</div>
+          <div className="name-word iuliu">Iuliu</div>
           <div className="name-word on-top gabriela">Gabriela</div>
-          <div className="name-word">Gabriela</div>
+          <div className="name-word gabriela">Gabriela</div>
         </div>
       </div>
       <div className="images-wrapper">
@@ -44,7 +60,7 @@ export default function LandingPage() {
             key={index}
             src={`images/landing/image${index + 1}.jpeg`}
             alt="Iuliu & Gabriela Travelling"
-            className={selectedImageIndex === index ? 'nofilter' : ''}
+            className={selectedImageIndex === index || secondImageIndex === index ? 'highlighted' : ''}
           />
         ))}
       </div>

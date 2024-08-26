@@ -11,16 +11,20 @@
     flex-wrap: wrap;
     align-items: center;
     width: 100vw;
-    gap: 4px;
+    /* gap: 4px; */
 
     img {
-      width: calc(100vw / 4 - 3px);
-      filter: brightness(0.8) saturate(0%);
-      transition: all 2s ease-in-out;
+      width: calc(100vw / 4);
+      filter: brightness(0.2);
+      transition: all 3s cubic-bezier(0.25, 1, 0.32, 1);
+      position: relative;
 
-      &.nofilter {
-        transition: none;
-        filter: none;
+      &.highlighted {
+        transition: all 0.5s ease-in;
+        filter: brightness(0.8);
+        /* transform: scale(1.5); */
+        opacity: 0.99;
+        z-index: 2;
       }
     }
   }
@@ -34,8 +38,9 @@
     transform-origin: center;
 
     &.black {
-      background: #0004;
-      z-index: 1;
+      background: #000;
+      z-index: 10;
+      animation: fade-to-transparent 6s ease-in-out 0s forwards;
     }
 
     &.colored {
@@ -52,7 +57,7 @@
         radial-gradient(at 80% 100%, hsla(242, 100%, 70%, 1) 0px, transparent 50%),
         radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0px, transparent 50%);
 
-      opacity: 0.4;
+      opacity: 0;
       /* animation: fade-to-transparent 3s ease-in-out 0s forwards; */
     }
   }
@@ -72,6 +77,9 @@
 
     z-index: 5;
     filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.35));
+    opacity: 0;
+
+    animation: show 1s ease-in-out 1.7s forwards;
   }
 
   .title-and-subtitle {
@@ -79,7 +87,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    z-index: 3;
+    z-index: 11;
     margin-top: -16px;
   }
 
@@ -94,6 +102,15 @@
       position: relative;
       z-index: 1;
       text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.35);
+      opacity: 0;
+
+      &.iuliu {
+        animation: show 1s ease-in-out 1s forwards;
+      }
+
+      &.gabriela {
+        animation: show 1s ease-in-out 2s forwards;
+      }
 
       &.on-top {
         position: absolute;
@@ -149,10 +166,19 @@
   0% {
     opacity: 1;
   }
-  35% {
+  50% {
     opacity: 1;
   }
   100% {
-    opacity: 0.4;
+    opacity: 0;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

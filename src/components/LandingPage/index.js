@@ -10,10 +10,10 @@ const transforms = {
 export default function LandingPage() {
   // randomly select an image and remove all transforms from it, using react
   // state to force re-render
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [selectedImageIndex, setSelectedImageIndex] = useState();
 
   useEffect(() => {
-    colorizeRandomImage();
+    // colorizeRandomImage();
   }, []);
 
   const colorizeRandomImage = async () => {
@@ -27,11 +27,14 @@ export default function LandingPage() {
 
   return (
     <div className="screen-landing-page">
-      <div className="backdrop"></div>
+      <div className="backdrop colored"></div>
+      <div className="backdrop black"></div>
       <div className="title-and-subtitle">
         <div className="title">
           <div className="and-symbol">&</div>
+          <div className="name-word on-top iuliu">Iuliu</div>
           <div className="name-word">Iuliu</div>
+          <div className="name-word on-top gabriela">Gabriela</div>
           <div className="name-word">Gabriela</div>
         </div>
       </div>

@@ -6,9 +6,12 @@ import NavHearts from './components/NavHearts';
 export default function App() {
   return (
     <div className="App">
-      <NavHearts/>
+      <NavHearts />
       <LandingPage />
-      <ScreenTwo />
+      <div className="next-pages">
+        <ScreenTwo />
+        <ScreenTwo />
+      </div>
     </div>
   );
 }

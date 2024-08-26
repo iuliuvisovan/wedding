@@ -1,3 +1,7 @@
 .screen-two {
   height: 500px;
+  width: 100vw;
+  box-shadow: 1px -0px 24px #000b;
+  position: relative;
+  z-index: 20;
 }

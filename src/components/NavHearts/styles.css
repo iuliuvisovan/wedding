@@ -1,29 +1,27 @@
 .hearts-navigation {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
   position: fixed;
-  bottom: 14px;
+  top: calc(88dvh - 85px);
   right: 10px;
-  z-index: 10;
+  z-index: 51;
+  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.25));
 
   .heart {
     line-height: 0.7em;
-    height: 14px;
-    width: 16px;
-    overflow: hidden;
-    filter: saturate(1.5);
+    color: white;
+    /* opacity: 0.6; */
 
     &.selected {
-      img {
-        transform: translateY(-14px);
-        opacity: 1;
-      }
+      opacity: 1;
+      color: hsl(39, 100%, 60%);
+      filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.05));
     }
 
-    img {
-      width: 100%;
-      opacity: 0.6;
+    svg {
+      width: 14px;
+      height: 14px;
     }
   }
 }
@@ -32,8 +30,9 @@
   position: fixed;
   bottom: 0;
   right: 0;
-  width: 70px;
-  height: 230px;
-  background: linear-gradient(-80deg, #0002, #0000, #ffbf0000);
-  z-index: 9;
+  width: 240px;
+  height: 350px;
+  background: linear-gradient(-77deg, #0003, #0000, #0000, #0000);
+  z-index: 50;
+  pointer-events: none;
 }

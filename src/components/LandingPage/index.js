@@ -10,8 +10,8 @@ export default function LandingPage() {
     <div className="screen-landing-page">
       <div className="backdrop"></div>
       <div className="title">
-        <div className="name-word">Iuliu</div>
         <div className="and-symbol">&</div>
+        <div className="name-word">Iuliu</div>
         <div className="name-word">Gabriela</div>
       </div>
       <div className="images-wrapper">

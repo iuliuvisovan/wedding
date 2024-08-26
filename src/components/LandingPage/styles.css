@@ -27,6 +27,16 @@
     z-index: 1;
   }
 
+  .and-symbol {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 86px;
+    color: #ffbf00;
+    position: absolute;
+    font-weight: 800;
+  }
+
   .title-and-subtitle {
     position: absolute;
     left: 50%;
@@ -34,16 +44,6 @@
     transform: translate(-50%, -50%);
     z-index: 2;
     margin-top: -16px;
-
-    .and-symbol {
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 86px;
-      color: #ffbf00;
-      position: absolute;
-      font-weight: 800;
-    }
   }
 
   .title {

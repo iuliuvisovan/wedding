@@ -52,6 +52,7 @@
       transform: translate(-50%, -50%);
       font-size: 80px;
       color: #ffbf00;
+      border: 1px solid red;
     }
   }
 }

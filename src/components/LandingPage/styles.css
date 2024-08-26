@@ -1,6 +1,6 @@
 .screen-landing-page {
   overflow: hidden;
-  height: calc(100vh - 70px);
+  height: calc(100vh - 80px);
   box-shadow: 1px 4px 4px rgba(132, 132, 132, 0.3);
   position: relative;
 
@@ -27,16 +27,30 @@
     z-index: 1;
   }
 
-  .title {
-    font-family: 'Parisienne', cursive;
+  .title-and-subtitle {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
+
+    .and-symbol {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 90px;
+      color: #ffbf00;
+      position: absolute;
+      font-weight: 800;
+    }
+  }
+
+  .title {
+    font-family: 'Parisienne', cursive;
     color: white;
-    font-size: 72px;
+    font-size: 80px;
     margin-top: -16px;
+    position: relative;
 
     .name-word {
       margin: -24px 0;
@@ -46,13 +60,24 @@
     }
   }
 
-  .and-symbol {
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 80px;
-    color: #ffbf00;
-    position: absolute;
-    border: 1px solid blue;
+  .subtitle {
+    margin-top: 40px;
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 6px;
+    white-space: nowrap;
+    /* text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3); */
+
+    .gold {
+      color: #ffbf00;
+      /* font-size: 14px; */
+    }
+
+    img {
+      width: 24px;
+      color: #ffbf00;
+      margin-right: 4px;
+    }
   }
 }

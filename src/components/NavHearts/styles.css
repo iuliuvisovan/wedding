@@ -11,7 +11,7 @@
     line-height: 0.7em;
     height: 14px;
     width: 16px;
-    overflow-x: hidden;
+    overflow: hidden;
     filter: saturate(1.5);
 
     &.selected {

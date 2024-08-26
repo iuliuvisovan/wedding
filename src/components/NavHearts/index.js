@@ -6,7 +6,7 @@ export default function NavHearts() {
     <>
       {/* <div className="hearts-gradient"></div> */}
       <div className="hearts-navigation">
-        {new Array(6).fill(null).map((_, index) => (
+        {new Array(5).fill(null).map((_, index) => (
           <div key={index} className={'heart' + (index === 0 ? ' selected' : '')}>
             <HeartIcon />
           </div>

@@ -38,20 +38,20 @@
     font-size: 72px;
     margin-top: -16px;
 
-    .word {
-      margin: -24px 0;
-      position: relative;
-      z-index: 1;
-      text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
-    }
-
-    .and {
-      color: #ffbf00;
+    .and-symbol {
       position: absolute;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
       font-size: 80px;
+      color: #ffbf00;
+    }
+
+    .name-word {
+      margin: -24px 0;
+      position: relative;
+      z-index: 1;
+      text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
     }
   }
 }

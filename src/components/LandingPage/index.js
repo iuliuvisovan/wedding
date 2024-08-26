@@ -10,9 +10,9 @@ export default function LandingPage() {
     <div className="screen-landing-page">
       <div className="backdrop"></div>
       <div className="title">
-        <div className='word'>Iuliu</div>
-        <div className='and'>&</div>
-        <div className='word'>Gabriela</div>
+        <div className="name-word">Iuliu</div>
+        <div className="and-symbol">&</div>
+        <div className="name-word">Gabriela</div>
       </div>
       <div className="images-wrapper">
         {new Array(30).fill(null).map((_, index) => (

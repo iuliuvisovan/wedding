@@ -1,0 +1,57 @@
+.screen-landing-page {
+  overflow: hidden;
+  height: calc(100vh - 70px);
+  box-shadow: 1px 4px 4px rgba(132, 132, 132, 0.3);
+  position: relative;
+
+  .images-wrapper {
+    height: 110vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100vw;
+
+    img {
+      width: calc(100vw / 4);
+    }
+  }
+
+  .backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(53.75deg 50% 7% / 60.2%);
+    z-index: 1;
+  }
+
+  .title {
+    font-family: 'Parisienne', cursive;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: white;
+    font-size: 72px;
+    margin-top: -16px;
+
+    .word {
+      margin: -24px 0;
+      position: relative;
+      z-index: 1;
+      text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .and {
+      color: #ffbf00;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 80px;
+    }
+  }
+}

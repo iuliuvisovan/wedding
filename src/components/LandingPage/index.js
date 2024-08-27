@@ -18,15 +18,13 @@ export default function LandingPage() {
   useEffect(() => {
     clearInterval(intervalRef);
 
-    intervalRef = setInterval(() => {
-      console.log('Setting interval');
-
-      highlightRandomImage();
-    }, 2000);
+    // intervalRef = setInterval(() => {
+    //   highlightRandomImage();
+    // }, 1000);
   }, []);
 
   const highlightRandomImage = async () => {
-    const randomDuration = Math.floor(Math.random() * 1000);
+    const randomDuration = Math.floor(Math.random() * 500);
 
     await wait(randomDuration);
 

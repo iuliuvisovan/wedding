@@ -11,17 +11,17 @@
     flex-wrap: wrap;
     align-items: center;
     width: 100vw;
-    /* gap: 4px; */
+    gap: 4px;
 
     img {
-      width: calc(100vw / 4);
-      filter: brightness(0.2);
-      transition: all 3s cubic-bezier(0.25, 1, 0.32, 1);
+      width: calc(100vw / 4 - 3px);
+      filter: saturate(0) contrast(0.7) sepia(0.35) hue-rotate(-3deg) saturate(2);
+      /* transition: all 5s cubic-bezier(0.25, 1, 0.32, 1); */
       position: relative;
 
       &.highlighted {
-        transition: all 0.5s ease-in;
-        filter: brightness(0.8);
+        transition: all 1s ease-in;
+        filter: brightness(0.7);
         /* transform: scale(1.5); */
         opacity: 0.99;
         z-index: 2;
@@ -31,33 +31,24 @@
 
   .backdrop {
     position: absolute;
-    top: -50vh;
-    left: -50vh;
-    width: 200vh;
-    height: 200vh;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     transform-origin: center;
 
     &.black {
       background: #000;
       z-index: 10;
-      animation: fade-to-transparent 6s ease-in-out 0s forwards;
+      animation: fade-to-transparent 1.5s ease-in-out 0s forwards;
     }
 
     &.colored {
       z-index: 2;
-      /* background: radial-gradient(ellipse farthest-corner at left top, #ffd3ac 0%, #ffd3ac 50%),
-        radial-gradient(ellipse farthest-corner at right bottom, #ffffff 0%, #f34771 8%, #f34771 25%); */
-
-      background-color: hsla(35, 100%, 74%, 1);
-      background-image: radial-gradient(at 40% 20%, hsla(35, 100%, 74%, 1) 0px, transparent 50%),
-        radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 1) 0px, transparent 50%),
-        radial-gradient(at 0% 50%, hsla(355, 100%, 93%, 1) 0px, transparent 50%),
-        radial-gradient(at 80% 50%, hsla(340, 100%, 76%, 1) 0px, transparent 50%),
-        radial-gradient(at 0% 100%, hsla(22, 100%, 77%, 1) 0px, transparent 50%),
-        radial-gradient(at 80% 100%, hsla(242, 100%, 70%, 1) 0px, transparent 50%),
-        radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0px, transparent 50%);
-
-      opacity: 0;
+      background: radial-gradient(ellipse farthest-corner at left bottom, #fedb37 0, #fdb931 8%, #9f7928 30%, #8a6e2f 40%, #0000 80%),
+        radial-gradient(ellipse farthest-corner at right top, #ffffac44 0, #ffffacbb 0, #ffbf0088 10%, #5d4a1fbb 60.5%, #5d4a1f88 100%);
+      opacity: 0.6;
+      /* filter: brightness(0.6); */
       /* animation: fade-to-transparent 3s ease-in-out 0s forwards; */
     }
   }
@@ -79,7 +70,7 @@
     filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.35));
     opacity: 0;
 
-    animation: show 1s ease-in-out 1.7s forwards;
+    animation: show 1s ease-in-out 2.7s forwards;
   }
 
   .title-and-subtitle {
@@ -105,11 +96,11 @@
       opacity: 0;
 
       &.iuliu {
-        animation: show 1s ease-in-out 1s forwards;
+        animation: show 1s ease-in-out 2s forwards;
       }
 
       &.gabriela {
-        animation: show 1s ease-in-out 2s forwards;
+        animation: show 1s ease-in-out 3s forwards;
       }
 
       &.on-top {
@@ -170,7 +161,7 @@
     opacity: 1;
   }
   100% {
-    opacity: 0;
+    opacity: 0.3;
   }
 }
 

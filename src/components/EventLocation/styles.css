@@ -32,24 +32,33 @@
         overflow: hidden;
         display: flex;
         align-items: center;
-        height: 40px;
+        height: 50px;
         border-bottom: 3px solid #b57d42;
+        font-family: 'Montserrat', sans-serif;
+        margin-left: 2px;
+        margin-top: 2px;
 
         img {
-          width: 40px;
+          width: 50px;
         }
-
-        .client-name {
+        .elitis-info {
           height: 100%;
           padding-left: 8px;
+          padding-top: 12px;
           padding-right: 16px;
           display: flex;
-          align-items: center;
-          /* border-bottom: 2px solid red; */
+          flex-direction: column;
+          align-items: flex-start;
 
-          font-size: 14px;
-          font-weight: 600;
-          font-family: 'Montserrat', sans-serif;
+          .name {
+            font-size: 14px;
+            font-weight: 600;
+          }
+
+          .address {
+            font-size: 13px;
+            font-weight: 500;
+          }
         }
       }
     }

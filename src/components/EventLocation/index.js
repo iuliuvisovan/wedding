@@ -4,8 +4,8 @@ import './styles.css';
 
 // Center of the map (coordinates for Elitis Events Center in Făget)
 const mapCenterCoordinates = {
-  lat: 46.74925706828539,
-  lng: 23.589937983729106,
+  lat: 46.74525706828539,
+  lng: 23.605007983729106,
 };
 const elitisCoordinates = {
   lat: 46.725863108755014,
@@ -13,11 +13,6 @@ const elitisCoordinates = {
 };
 
 export default function EventLocation() {
-  const [map, setMap] = useState();
-
-  const onMapLoad = useCallback((mapRef) => setMap(mapRef), []);
-  const onMapUnmount = useCallback(() => setMap(null), []);
-
   return (
     <div className="event-location">
       <div className="map-container" onClick={() => window.open('https://maps.app.goo.gl/tYqw6WybFfrq8sSu6', '_blank')}>
@@ -37,15 +32,16 @@ export default function EventLocation() {
             gestureHandling: 'none',
             zoomControl: false,
           }}
-          onLoad={onMapLoad}
-          onUnmount={onMapUnmount}
         >
           {/* <Marker position={elitisCoordinates} /> */}
           <OverlayViewF position={elitisCoordinates} mapPaneName={OverlayView.OVERLAY_MOUSE_TARGET}>
             <div className="client-marker-wrapper">
               <div className="client-marker">
                 <img loading="lazy" src="images/elitis-logo.jpg" alt="Elitis Events Center logo" />
-                <span className="client-name">Elitis Events Center</span>
+                <div className="elitis-info">
+                  <div className="name">Elitis Events Center</div>
+                  <div className="address">str. Făgetului 74, Cluj-Napoca</div>
+                </div>
               </div>
             </div>
           </OverlayViewF>
@@ -57,6 +53,36 @@ export default function EventLocation() {
 
 // Custom white and gold theme styles
 const mapStyles = [
+  {
+    featureType: 'all',
+    elementType: 'labels',
+    stylers: [{ visibility: 'off' }],
+  },
+  {
+    featureType: 'administrative.locality', // City names like "Cluj-Napoca"
+    elementType: 'labels.text',
+    stylers: [{ visibility: 'on' }],
+  },
+  {
+    featureType: 'administrative.neighborhood', // Neighborhood names
+    elementType: 'labels.text',
+    stylers: [{ visibility: 'on' }],
+  },
+  {
+    featureType: 'administrative',
+    elementType: 'geometry',
+    stylers: [{ visibility: 'off' }],
+  },
+  {
+    featureType: 'water',
+    elementType: 'geometry',
+    stylers: [{ visibility: 'on' }, { color: '#e5e3df' }],
+  },
+  {
+    featureType: 'landscape',
+    elementType: 'geometry',
+    stylers: [{ visibility: 'on' }, { color: '#f5f5f2' }],
+  },
   {
     elementType: 'geometry',
     stylers: [
@@ -90,7 +116,7 @@ const mapStyles = [
     elementType: 'geometry',
     stylers: [
       {
-        color: '#c5c086', // Light gold
+        color: '#c5bc86', // Light gold
       },
     ],
   },
@@ -159,6 +185,38 @@ const mapStyles = [
     stylers: [
       {
         color: '#92998d', // Gray-gold for water labels
+      },
+    ],
+  },
+
+  {
+    featureType: 'administrative.locality',
+    elementType: 'labels',
+    stylers: [
+      {
+        visibility: 'simplified',
+      },
+    ],
+  },
+  {
+    featureType: 'administrative.locality',
+    elementType: 'labels.text',
+    stylers: [
+      {
+        visibility: 'on',
+      },
+      {
+        weight: 5.5,
+      },
+    ],
+  },
+
+  {
+    featureType: 'administrative.land_parcel',
+    elementType: 'labels',
+    stylers: [
+      {
+        visibility: 'off',
       },
     ],
   },

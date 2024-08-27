@@ -1,6 +1,20 @@
 .were-getting-married {
   padding-top: 100px;
   font-family: 'Parisienne', cursive;
+  position: relative;
+
+  .animation-wrapper {
+    position: absolute;
+    top: -200px;
+    left: 0;
+    width: calc(100vw);
+    overflow: hidden;
+
+    .fireworks {
+      width: 120%;
+      margin-left: -10%;
+    }
+  }
 
   h2 {
     color: #64810e;
@@ -8,8 +22,7 @@
     margin: 0;
     letter-spacing: -2px;
     text-align: right;
-    padding-right: 24px;
-
+    padding-right: 40px;
   }
 
   h1 {

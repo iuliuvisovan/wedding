@@ -63,6 +63,7 @@ export default function LandingPage() {
           />
         ))}
       </div>
+      <div className="bottom-gradient"></div>
     </div>
   );
 }

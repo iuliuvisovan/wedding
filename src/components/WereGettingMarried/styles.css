@@ -1,0 +1,27 @@
+.were-getting-married {
+  padding-top: 100px;
+  font-family: 'Parisienne', cursive;
+
+  h2 {
+    color: #64810e;
+    font-size: 40px;
+    margin: 0;
+    letter-spacing: -2px;
+    text-align: right;
+    padding-right: 24px;
+
+  }
+
+  h1 {
+    background: linear-gradient(0, hsl(41, 100%, 75%), hsl(41, 100%, 45%), hsl(41, 100%, 75%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+
+    letter-spacing: -5px;
+    font-size: 100px;
+    padding-right: 22px;
+    margin-top: -16px;
+  }
+}

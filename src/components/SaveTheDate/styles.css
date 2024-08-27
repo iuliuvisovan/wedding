@@ -8,16 +8,9 @@
   border-radius: 16px;
   background: white;
   margin: -24px 16px;
+  margin-top: -120px;
   overflow: hidden;
   height: 240px;
-  /* opacity: 0; */
-
-  /* background-color: hsl(28, 100%, 100%);
-  background-image: radial-gradient(at 12% 0%, #f6b09282 0px, transparent 50%),
-    radial-gradient(at 64% 63%, #f6b09200 0px, transparent 50%),
-    radial-gradient(at 37% 73%, #f6b09282 0px, transparent 50%),
-    radial-gradient(at 92% 70%, #f6b09274 0px, transparent 50%),
-    radial-gradient(at 58% 6%, #ffffff 0px, transparent 50%); */
 
   background: url('../../../public/images/flower-bg.jpg') 100% 100%;
 
@@ -27,7 +20,7 @@
   img {
     width: 100vw;
     margin-left: -24px;
-    filter: brightness(64%) hue-rotate(28deg);
+    filter: brightness(60%) hue-rotate(28deg);
   }
 
   h1 {
@@ -48,22 +41,5 @@
     margin-bottom: 0;
     color: #fff;
     text-shadow: 0px 0px 4px hsla(42, 100%, 37%, 0.25);
-
-    /* 
-
-    background: liear-gradient(-45deg, #ffbd23, hsla(41, 100%, 55%), #ffbd23);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
-
-    .gold {
-      /* color: #f3a81b; */
-      /* font-weight: 500; */
-      /* background: linear-gradient(0, hsla(41, 100%, 65%), #ffbd23, hsl(41, 100%, 65%));
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent; */
-      /* font-size: 14px; */
-    }
   }
 }

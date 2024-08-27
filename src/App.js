@@ -3,6 +3,7 @@ import LandingPage from './components/LandingPage';
 import SaveTheDate from './components/SaveTheDate';
 import EventLocation from './components/EventLocation';
 import ScreenFour from './components/ScreenFour';
+import WereGettingMarried from './components/WereGettingMarried';
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
       <LandingPage />
       <div className="next-pages">
         <SaveTheDate />
+        <WereGettingMarried />
         <EventLocation />
         <ScreenFour />
       </div>

@@ -1,11 +1,11 @@
 .screen-landing-page {
   overflow: hidden;
-  height: calc(100vh - 56px);
+  height: calc(115vh - 56px);
   /* box-shadow: 1px 4px 4px rgba(132, 132, 132, 0.3); */
   position: relative;
 
   .images-wrapper {
-    height: 110vh;
+    height: 125vh;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -79,7 +79,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 11;
-    margin-top: -16px;
+    margin-top: -60px;
   }
 
   .title {

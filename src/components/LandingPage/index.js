@@ -9,6 +9,7 @@ const transforms = {
 
 let intervalRef;
 
+const NUMBER_OF_IMAGES = 60;
 export default function LandingPage() {
   // randomly select an image and remove all transforms from it, using react
   // state to force re-render
@@ -28,11 +29,11 @@ export default function LandingPage() {
 
     await wait(randomDuration);
 
-    const randomIndex = Math.floor(Math.random() * 30);
+    const randomIndex = Math.floor(Math.random() * NUMBER_OF_IMAGES);
 
     setSelectedImageIndex(randomIndex);
 
-    const randomIndexTwo = Math.floor(Math.random() * 30);
+    const randomIndexTwo = Math.floor(Math.random() * NUMBER_OF_IMAGES);
 
     await wait(300);
 

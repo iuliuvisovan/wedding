@@ -8,6 +8,8 @@ body {
   background: white;
   overflow-x: hidden;
   color: #444240;
+  text-align: center;
+  background: #ffecc2;
 }
 
 code {

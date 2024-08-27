@@ -7,8 +7,7 @@
   padding-top: 22px;
   border-radius: 16px;
   background: white;
-  margin: 0 8px;
-  margin-top: -24px;
+  margin: -24px 8px;
   overflow: hidden;
 
   background-color: hsl(28, 100%, 100%);

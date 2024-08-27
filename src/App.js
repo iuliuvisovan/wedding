@@ -1,8 +1,8 @@
-import './App.css';
-import LandingPage from './components/LandingPage';
-import ScreenTwo from './components/ScreenTwo';
-import ScreenThree from './components/ScreenThree';
 import NavHearts from './components/NavHearts';
+import LandingPage from './components/LandingPage';
+import SaveTheDate from './components/SaveTheDate';
+import EventLocation from './components/EventLocation';
+import ScreenFour from './components/ScreenFour';
 
 export default function App() {
   return (
@@ -10,8 +10,9 @@ export default function App() {
       <NavHearts />
       <LandingPage />
       <div className="next-pages">
-        <ScreenTwo />
-        <ScreenThree />
+        <SaveTheDate />
+        <EventLocation />
+        <ScreenFour />
       </div>
     </div>
   );

@@ -1,0 +1,57 @@
+.event-location {
+  height: 500px;
+  width: 100vw;
+  position: relative;
+  z-index: 19;
+
+  .map-container {
+    position: relative;
+
+    .address-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      padding: 8px;
+      background: #fff;
+      border-bottom-right-radius: 8px;
+      border-top-left-radius: 8px;
+      box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2);
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    .client-marker-wrapper {
+      padding-right: 8px;
+
+      .client-marker {
+        background: #fff;
+        border-radius: 16px;
+        border-top-left-radius: 0;
+        box-shadow: 4px 4px 12px #0008;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        height: 40px;
+        border-bottom: 3px solid #b57d42;
+
+        img {
+          width: 40px;
+        }
+
+        .client-name {
+          height: 100%;
+          padding-left: 8px;
+          padding-right: 16px;
+          display: flex;
+          align-items: center;
+          /* border-bottom: 2px solid red; */
+
+          font-size: 14px;
+          font-weight: 600;
+          font-family: 'Montserrat', sans-serif;
+        }
+      }
+    }
+  }
+}

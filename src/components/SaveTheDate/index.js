@@ -1,6 +1,6 @@
 import './styles.css';
 
-export default function ScreenTwo() {
+export default function SaveTheDate() {
   return (
     <div className="screen-two">
       <img src={`images/save-the-date.png`} />

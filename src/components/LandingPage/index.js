@@ -18,9 +18,9 @@ export default function LandingPage() {
   useEffect(() => {
     clearInterval(intervalRef);
 
-    // intervalRef = setInterval(() => {
-    //   highlightRandomImage();
-    // }, 1000);
+    intervalRef = setInterval(() => {
+      highlightRandomImage();
+    }, 500);
   }, []);
 
   const highlightRandomImage = async () => {
@@ -34,7 +34,7 @@ export default function LandingPage() {
 
     const randomIndexTwo = Math.floor(Math.random() * 30);
 
-    await wait(300)
+    await wait(300);
 
     setSecondImageIndex(randomIndexTwo);
   };

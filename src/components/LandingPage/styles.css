@@ -16,15 +16,14 @@
     img {
       width: calc(100vw / 4 - 3px);
       filter: saturate(0) contrast(0.7) sepia(0.35) hue-rotate(-3deg) saturate(2);
-      /* transition: all 5s cubic-bezier(0.25, 1, 0.32, 1); */
+      /* filter: saturate(0.4); */
+      transition: all 3.5s ease-in;
       position: relative;
 
       &.highlighted {
-        transition: all 1s ease-in;
-        filter: brightness(0.7);
+        transition: all 0.5s ease-in;
+        filter: none;
         /* transform: scale(1.5); */
-        opacity: 0.99;
-        z-index: 2;
       }
     }
   }

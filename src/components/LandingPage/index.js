@@ -20,11 +20,11 @@ export default function LandingPage() {
 
     intervalRef = setInterval(() => {
       highlightRandomImage();
-    }, 500);
+    }, 800);
   }, []);
 
   const highlightRandomImage = async () => {
-    const randomDuration = Math.floor(Math.random() * 300);
+    const randomDuration = Math.floor(Math.random() * 0);
 
     await wait(randomDuration);
 
@@ -41,7 +41,7 @@ export default function LandingPage() {
 
   return (
     <div className="screen-landing-page">
-      <div className="backdrop colored"></div>
+      {/* <div className="backdrop colored"></div>*/}
       <div className="backdrop black"></div>
       <div className="title-and-subtitle">
         <div className="title">

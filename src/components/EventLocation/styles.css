@@ -6,6 +6,7 @@
 
   .map-container {
     position: relative;
+    opacity: 0;
 
     .address-container {
       position: absolute;
@@ -22,8 +23,6 @@
     }
 
     .client-marker-wrapper {
-      padding-right: 8px;
-
       .client-marker {
         background: #fff;
         border-radius: 16px;
@@ -41,11 +40,12 @@
         img {
           width: 50px;
         }
+
         .elitis-info {
           height: 100%;
           padding-left: 8px;
-          padding-top: 12px;
-          padding-right: 16px;
+          padding-top: 14px;
+          padding-right: 12px;
           display: flex;
           flex-direction: column;
           align-items: flex-start;

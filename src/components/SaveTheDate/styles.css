@@ -1,25 +1,33 @@
 .screen-two {
-  width: calc(100vw - 16px);
-  box-shadow: 0px 0px 16px #0004;
+  width: calc(100vw - 16px * 2);
+  box-shadow: 0px 0px 16px #0003;
   position: relative;
   z-index: 50;
-  padding-bottom: 24px;
-  padding-top: 22px;
+  padding-bottom: 14px;
+  padding-top: 12px;
   border-radius: 16px;
   background: white;
-  margin: -24px 8px;
+  margin: -24px 16px;
   overflow: hidden;
+  height: 240px;
+  /* opacity: 0; */
 
-  background-color: hsl(28, 100%, 100%);
-  background-image: radial-gradient(at 12% 0%, hsla(43, 100%, 50%, 0.2) 0px, transparent 50%),
-    radial-gradient(at 64% 63%, hsla(34, 100%, 75%, 0) 0px, transparent 50%),
-    radial-gradient(at 17% 83%, hsla(38, 100%, 69%, 0.2) 0px, transparent 50%),
-    radial-gradient(at 92% 70%, hsla(42, 100%, 50%, 0.25) 0px, transparent 50%),
-    radial-gradient(at 58% 6%, hsla(293, 100%, 100%, 1) 0px, transparent 50%);
+  /* background-color: hsl(28, 100%, 100%);
+  background-image: radial-gradient(at 12% 0%, #f6b09282 0px, transparent 50%),
+    radial-gradient(at 64% 63%, #f6b09200 0px, transparent 50%),
+    radial-gradient(at 37% 73%, #f6b09282 0px, transparent 50%),
+    radial-gradient(at 92% 70%, #f6b09274 0px, transparent 50%),
+    radial-gradient(at 58% 6%, #ffffff 0px, transparent 50%); */
+
+  background: url('../../../public/images/flower-bg.jpg') 100% 100%;
+
+  /* background of full width image */
+  background-size: cover;
 
   img {
     width: 100vw;
-    margin-left: -8px;
+    margin-left: -24px;
+    filter: brightness(64%) hue-rotate(28deg);
   }
 
   h1 {
@@ -36,13 +44,17 @@
     font-size: 40px;
     font-weight: 600;
     letter-spacing: 4px;
-    margin: 24px 0;
-    color: #ffbd23;
+    margin-top: 20px;
+    margin-bottom: 0;
+    color: #fff;
+    text-shadow: 0px 0px 4px hsla(42, 100%, 37%, 0.25);
 
-    background: linear-gradient(-45deg, #ffbd23, hsla(41, 100%, 55%), #ffbd23);
+    /* 
+
+    background: liear-gradient(-45deg, #ffbd23, hsla(41, 100%, 55%), #ffbd23);
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
 
     .gold {
       /* color: #f3a81b; */

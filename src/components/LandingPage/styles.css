@@ -1,6 +1,6 @@
 .screen-landing-page {
   overflow: hidden;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 56px);
   /* box-shadow: 1px 4px 4px rgba(132, 132, 132, 0.3); */
   position: relative;
 
@@ -12,16 +12,17 @@
     align-items: center;
     width: 100vw;
     gap: 4px;
+    background: #888;
 
     img {
       width: calc(100vw / 4 - 3px);
-      filter: saturate(0) contrast(0.75) sepia(0.3) hue-rotate(-3deg) saturate(1);
-      /* filter: saturate(0.4); */
+      /* filter: saturate(1) contrast(0.75) sepia(0.3) hue-rotate(-3deg) saturate(1); */
+      filter: brightness(0.5);
       transition: all 1s ease-in;
       position: relative;
 
       &.highlighted {
-        transition: all 0.35s ease-in;
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         filter: none;
         /* transform: scale(1.5); */
       }
@@ -39,7 +40,7 @@
     &.black {
       background: #000;
       z-index: 10;
-      animation: fade-to-transparent 1.5s ease-in-out 0s forwards;
+      animation: fade-to-transparent 2s ease-in-out 0s forwards;
     }
 
     &.colored {
@@ -86,6 +87,9 @@
     color: white;
     font-size: 80px;
     position: relative;
+    /* filter: drop-shadow(0 0 30px rgba(0, 0, 0, 1)); */
+
+    /* dark black circle in the middle */
 
     .name-word {
       margin: -26px 0;
@@ -160,7 +164,7 @@
     opacity: 1;
   }
   100% {
-    opacity: 0.3;
+    opacity: 0;
   }
 }
 

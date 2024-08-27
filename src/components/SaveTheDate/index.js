@@ -5,9 +5,9 @@ export default function SaveTheDate() {
     <div className="screen-two">
       <img src={`images/save-the-date.png`} />
       <h2>
-        17<span className="gold">/</span>05<span className="gold">/</span>2025
+        17<span className="gold">.</span>05<span className="gold">.</span>2025
       </h2>
-      <img src={`images/save-the-date.png`} />
+      {/* <img src={`images/save-the-date.png`} /> */}
     </div>
   );
 }

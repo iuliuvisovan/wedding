@@ -1,11 +1,11 @@
-import React, { useState, useCallback } from 'react';
+import React from 'react';
 import { GoogleMap, OverlayView, OverlayViewF } from '@react-google-maps/api';
 import './styles.css';
 
 // Center of the map (coordinates for Elitis Events Center in Făget)
 const mapCenterCoordinates = {
   lat: 46.74525706828539,
-  lng: 23.605007983729106,
+  lng: 23.608007983729106,
 };
 const elitisCoordinates = {
   lat: 46.725863108755014,

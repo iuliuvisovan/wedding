@@ -1,7 +1,46 @@
 .screen-two {
-  height: 500px;
-  width: 100vw;
-  box-shadow: 1px -0px 24px #000b;
+  width: calc(100vw - 16px);
+  box-shadow: 0px 0px 16px #0004;
   position: relative;
-  z-index: 20;
+  z-index: 1000;
+  padding-bottom: 24px;
+  padding-top: 22px;
+  border-radius: 16px;
+  background: white;
+  margin: 0 8px;
+  margin-top: -30px;
+  overflow: hidden;
+
+
+  img {
+    width: 100vw;
+    margin-left: -8px;
+  }
+
+  h1 {
+    font-family: 'Parisienne', cursive;
+    background: linear-gradient(0, hsla(41, 100%, 75%), hsl(41, 100%, 50%), hsl(41, 100%, 75%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 50px;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin: 24px 0;
+
+    .gold {
+      /* color: #f3a81b; */
+      /* font-weight: 500; */
+      /* background: linear-gradient(0, hsla(41, 100%, 65%), #f2a71a, hsl(41, 100%, 65%));
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; */
+      /* font-size: 14px; */
+    }
+  }
 }

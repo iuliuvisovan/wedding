@@ -17,11 +17,11 @@
       width: calc(100vw / 4 - 3px);
       filter: saturate(0) contrast(0.75) sepia(0.35) hue-rotate(-3deg) saturate(1);
       /* filter: saturate(0.4); */
-      transition: all 3.5s ease-in;
+      transition: all 3s ease-in;
       position: relative;
 
       &.highlighted {
-        transition: all 0.5s ease-in;
+        transition: all 0.35s ease-in;
         filter: none;
         /* transform: scale(1.5); */
       }

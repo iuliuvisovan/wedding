@@ -1,6 +1,7 @@
 import './App.css';
 import LandingPage from './components/LandingPage';
 import ScreenTwo from './components/ScreenTwo';
+import ScreenThree from './components/ScreenThree';
 import NavHearts from './components/NavHearts';
 
 export default function App() {
@@ -10,7 +11,7 @@ export default function App() {
       <LandingPage />
       <div className="next-pages">
         <ScreenTwo />
-        <ScreenTwo />
+        <ScreenThree />
       </div>
     </div>
   );

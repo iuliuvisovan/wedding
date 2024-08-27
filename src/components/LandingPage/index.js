@@ -24,7 +24,7 @@ export default function LandingPage() {
   }, []);
 
   const highlightRandomImage = async () => {
-    const randomDuration = Math.floor(Math.random() * 500);
+    const randomDuration = Math.floor(Math.random() * 300);
 
     await wait(randomDuration);
 

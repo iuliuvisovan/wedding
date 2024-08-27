@@ -1,6 +1,8 @@
 body {
   margin: 0;
   font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /* <link rel="preconnect" href="https://fonts.googleapis.com" /> */
+  /* font-family: "Varela Round", sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: white;

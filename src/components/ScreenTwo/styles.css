@@ -2,15 +2,21 @@
   width: calc(100vw - 16px);
   box-shadow: 0px 0px 16px #0004;
   position: relative;
-  z-index: 1000;
+  z-index: 50;
   padding-bottom: 24px;
   padding-top: 22px;
   border-radius: 16px;
   background: white;
   margin: 0 8px;
-  margin-top: -30px;
+  margin-top: -24px;
   overflow: hidden;
 
+  background-color: hsl(28, 100%, 100%);
+  background-image: radial-gradient(at 12% 0%, hsla(43, 100%, 50%, 0.2) 0px, transparent 50%),
+    radial-gradient(at 64% 63%, hsla(34, 100%, 75%, 0) 0px, transparent 50%),
+    radial-gradient(at 17% 83%, hsla(38, 100%, 69%, 0.2) 0px, transparent 50%),
+    radial-gradient(at 92% 70%, hsla(42, 100%, 50%, 0.25) 0px, transparent 50%),
+    radial-gradient(at 58% 6%, hsla(293, 100%, 100%, 1) 0px, transparent 50%);
 
   img {
     width: 100vw;
@@ -32,11 +38,17 @@
     font-weight: 600;
     letter-spacing: 4px;
     margin: 24px 0;
+    color: #ffbd23;
+
+    background: linear-gradient(-45deg, #ffbd23, hsla(41, 100%, 55%), #ffbd23);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
     .gold {
       /* color: #f3a81b; */
       /* font-weight: 500; */
-      /* background: linear-gradient(0, hsla(41, 100%, 65%), #f2a71a, hsl(41, 100%, 65%));
+      /* background: linear-gradient(0, hsla(41, 100%, 65%), #ffbd23, hsl(41, 100%, 65%));
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent; */

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './styles.css';
 import React from 'react';
+import { WITH_ANIMATIONS } from '../../App';
 
 // map of transforms, which then applied to images:
 const transforms = {
@@ -16,6 +17,9 @@ export default function LandingPage() {
   const [selectedImageIndex, setSelectedImageIndex] = useState();
 
   useEffect(() => {
+    if (!WITH_ANIMATIONS) {
+      return;
+    }
     // Wait for initial animations to complete
     setTimeout(() => {
       clearInterval(intervalRef);
@@ -38,7 +42,7 @@ export default function LandingPage() {
 
   return (
     <div className="screen-landing-page">
-      <div className="backdrop black"></div>
+      {WITH_ANIMATIONS && <div className="backdrop black"></div>}
       <div className="title-and-subtitle">
         <div className="title">
           <div className="and-symbol">&</div>

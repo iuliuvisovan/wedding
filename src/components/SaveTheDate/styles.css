@@ -13,7 +13,7 @@
   overflow: hidden;
   height: 240px;
 
-  background: url('../../../public/images/flower-bg.jpg') 100% 100%;
+  background: url('../../../public/images/flower-bg-2.png') 100% 100%;
 
   /* background of full width image */
   background-size: cover;
@@ -22,6 +22,24 @@
     width: 100vw;
     margin-left: -24px;
     filter: brightness(60%) hue-rotate(28deg);
+  }
+
+  .video-wrapper {
+    position: absolute;
+    left: 0.5%;
+    top: 76%;
+    width: calc((100vw - 16px * 2) / 4.13);
+    z-index: 5;
+    transform: rotate(-8deg);
+    overflow: hidden;
+    clip-path: polygon(100% 0, 100% 100%, 49% 64%, 0 40%, 0 0);
+
+    filter: brightness(1.25) saturate(0.68);
+    mix-blend-mode: darken;
+
+    video {
+      width: calc((100vw - 16px * 2) / 2.4);
+    }
   }
 
   h1 {
@@ -42,5 +60,20 @@
     margin-bottom: 0;
     color: #fff;
     text-shadow: 0px 0px 4px hsla(42, 100%, 37%, 0.25);
+  }
+}
+
+@keyframes move-to-left {
+  0% {
+    margin-left: 0%;
+  }
+  40% {
+    margin-left: 0%;
+  }
+  55% {
+    margin-left: 40px;
+  }
+  100% {
+    margin-left: 40px;
   }
 }

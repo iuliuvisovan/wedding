@@ -36,7 +36,7 @@ export default function EventLocation() {
           <OverlayViewF position={centralParkCoordinates} mapPaneName={OverlayView.OVERLAY_MOUSE_TARGET}>
             <div className="client-marker-wrapper" onClick={() => window.open('https://maps.app.goo.gl/7bgsAGgWsF3vWr46A', '_blank')}>
               <div className="location-dot" style={{ background: '#709e33' }}></div>
-              <div className="client-marker" style={{ borderColor: '#709e33' }}>
+              <div className="client-marker">
                 <img loading="lazy" src="https://www.zcj.ro/images/db/1_3_264128_1716653623_06420.jpg" alt="Foișor Parcul Central" />
                 <div className="elitis-info">
                   <div className="name">Foișor Parcul Central</div>

@@ -2,8 +2,8 @@ import NavHearts from './components/NavHearts';
 import LandingPage from './components/LandingPage';
 import SaveTheDate from './components/SaveTheDate';
 import EventLocation from './components/EventLocation';
-import ScreenFour from './components/ScreenFour';
 import WereGettingMarried from './components/WereGettingMarried';
+import Schedule from './components/Schedule';
 
 export default function App() {
   return (
@@ -13,8 +13,8 @@ export default function App() {
       <div className="next-pages">
         <SaveTheDate />
         <WereGettingMarried />
+        <Schedule />
         <EventLocation />
-        <ScreenFour />
       </div>
     </div>
   );

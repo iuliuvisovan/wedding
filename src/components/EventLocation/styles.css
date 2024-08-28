@@ -6,7 +6,6 @@
 
   .map-container {
     position: relative;
-    opacity: 0;
 
     .address-container {
       position: absolute;

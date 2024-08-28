@@ -1,11 +1,13 @@
 .were-getting-married {
-  padding-top: 100px;
+  padding-top: 200px;
+  padding-bottom: 200px;
   font-family: 'Parisienne', cursive;
   position: relative;
+  z-index: 100;
 
   .animation-wrapper {
     position: absolute;
-    top: -200px;
+    top: -60px;
     left: 0;
     width: calc(100vw);
     overflow: hidden;

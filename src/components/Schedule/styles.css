@@ -1,0 +1,90 @@
+.schedule-screen {
+  position: relative;
+
+  .timeline {
+    display: flex;
+    gap: 70px;
+    flex-direction: column;
+    padding: 40px 24px;
+    position: relative;
+
+    .line-through-hearts {
+      position: absolute;
+      top: 0;
+      left: 50px;
+      width: 0px;
+      border-right: 7px dotted hsl(39, 100%, 60%);
+      height: 390px;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    .schedule-item {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      align-items: center;
+
+      .hour {
+        position: relative;
+        height: 60px;
+
+        svg {
+          width: 60px;
+          height: 60px;
+          color: hsl(39, 100%, 60%);
+        }
+
+        span {
+          position: absolute;
+          left: 10px;
+          top: 17px;
+          color: #fff;
+          font-weight: 700;
+          z-index: 15;
+        }
+      }
+
+      .event-info {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        gap: 2px;
+        padding-left: 8px;
+
+        img {
+          width: 14px;
+          opacity: 0.4;
+          margin-bottom: -1px;
+        }
+
+        .title {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .bottom-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    height: 40px;
+    background: linear-gradient(0, #fff, #fff0);
+    z-index: 1;
+    /* border: 1px solid red; */
+  }
+
+  .top-gradient {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 200px;
+    height: 40px;
+    background: linear-gradient(0, #fff0, #fff);
+    z-index: 1;
+    /* border: 1px solid red; */
+  }
+}

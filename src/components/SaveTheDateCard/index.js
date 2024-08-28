@@ -7,6 +7,8 @@ import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 let playInterval;
 let shouldPauseScrollListening = false;
 
+const CHECKPOINT_OFFSET = 550;
+
 export default function SaveTheDate() {
   const videoRef = useRef();
   const [isFlipped, setIsFlipped] = useState(false);
@@ -34,13 +36,8 @@ export default function SaveTheDate() {
       return;
     }
 
-    console.log('event', event);
-    console.log('window.scrollY', window.scrollY);
-
-    const newIsFlipped = window.scrollY > 370 && window.scrollY < 500;
+    const newIsFlipped = window.scrollY > 370 && window.scrollY < CHECKPOINT_OFFSET;
     setIsFlipped(newIsFlipped);
-
-    console.log('newIsFlipped', newIsFlipped);
 
     if (newIsFlipped && !shouldShowAnimation) {
       shouldPauseScrollListening = true;
@@ -52,7 +49,7 @@ export default function SaveTheDate() {
       setShouldShowAnimation(false);
     }
 
-    if (window.scrollY > 500) {
+    if (window.scrollY > CHECKPOINT_OFFSET) {
       window.showSchedule();
       setIsPastCheckPoint(true);
     }

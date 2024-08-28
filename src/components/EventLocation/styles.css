@@ -5,6 +5,10 @@
   z-index: 19;
 
   .map-container {
+    .gm-style iframe + div {
+      border: none !important;
+    }
+
     .address-container {
       position: absolute;
       top: 0;
@@ -40,7 +44,7 @@
 
       .client-marker {
         background: #fff;
-        border-radius: 10px;
+        border-radius: 16px;
         box-shadow: 1px 1px 8px #0005;
         overflow: hidden;
         display: flex;

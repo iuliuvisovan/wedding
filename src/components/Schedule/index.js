@@ -5,7 +5,7 @@ export default function Schedule() {
   return (
     <div className="schedule-screen">
       <div className="top-gradient"></div>
-      
+
       <div className="timeline">
         <div className="line-through-hearts"></div>
         <div className="schedule-item">
@@ -45,7 +45,6 @@ export default function Schedule() {
           </div>
         </div>
       </div>
-      <div className="bottom-gradient"></div>
     </div>
   );
 }

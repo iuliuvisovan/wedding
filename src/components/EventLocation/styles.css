@@ -22,28 +22,40 @@
     }
 
     .client-marker-wrapper {
+      .location-dot {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 10px;
+        height: 10px;
+        background: #b57d42;
+        border-radius: 50%;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+        transform: translate(-50%, -50%);
+        border: 1px solid white;
+      }
+
       .client-marker {
         background: #fff;
-        border-radius: 16px;
-        border-top-left-radius: 0;
-        box-shadow: 4px 4px 12px #0008;
+        border-radius: 10px;
+        box-shadow: 4px 0px 8px #0004;
         overflow: hidden;
         display: flex;
         align-items: center;
-        height: 50px;
+        height: 46px;
         border-bottom: 3px solid #b57d42;
         font-family: 'Montserrat', sans-serif;
-        margin-left: 2px;
-        margin-top: 2px;
+        position: relative;
 
         img {
-          width: 50px;
+          height: 100%;
         }
 
         .elitis-info {
           height: 100%;
           padding-left: 8px;
-          padding-top: 14px;
+          padding-top: 12px;
           padding-right: 12px;
           display: flex;
           flex-direction: column;

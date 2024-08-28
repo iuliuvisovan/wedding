@@ -11,36 +11,53 @@ const elitisCoordinates = {
   lat: 46.725863108755014,
   lng: 23.58004341654534,
 };
+const centralParkCoordinates = {
+  lat: 46.76878878081249,
+  lng: 23.57670196776906,
+};
 
 export default function EventLocation() {
   return (
     <div className="event-location">
-      <div className="map-container" onClick={() => window.open('https://maps.app.goo.gl/tYqw6WybFfrq8sSu6', '_blank')}>
+      <div className="map-container">
         <GoogleMap
           mapContainerStyle={{
             width: '100%',
             height: '350px',
-            pointerEvents: 'none',
           }}
           center={mapCenterCoordinates}
           zoom={12}
           options={{
             styles: mapStyles,
-
             disableDefaultUI: true,
             mapTypeControl: false,
-            gestureHandling: 'none',
-            zoomControl: false,
           }}
         >
-          {/* <Marker position={elitisCoordinates} /> */}
+          <OverlayViewF position={centralParkCoordinates} mapPaneName={OverlayView.OVERLAY_MOUSE_TARGET}>
+            <div className="client-marker-wrapper" onClick={() => window.open('https://maps.app.goo.gl/7bgsAGgWsF3vWr46A', '_blank')}>
+              <div className="location-dot" style={{ background: '#619f0a' }}></div>
+              <div className="client-marker" style={{ borderColor: '#619f0a' }}>
+                <img loading="lazy" src="https://www.zcj.ro/images/db/1_3_264128_1716653623_06420.jpg" alt="Elitis Events Center logo" />
+                <div className="elitis-info">
+                  <div className="name">Foișor Parcul Central</div>
+                  <div className="address">str. Cardinal Iuliu Hossu 55</div>
+                </div>
+              </div>
+            </div>
+          </OverlayViewF>
           <OverlayViewF position={elitisCoordinates} mapPaneName={OverlayView.OVERLAY_MOUSE_TARGET}>
-            <div className="client-marker-wrapper">
+            <div className="client-marker-wrapper" onClick={() => window.open('https://maps.app.goo.gl/tYqw6WybFfrq8sSu6', '_blank')}>
+              <div className="location-dot"></div>
               <div className="client-marker">
-                <img loading="lazy" src="images/elitis-logo.jpg" alt="Elitis Events Center logo" />
+                <img
+                  loading="lazy"
+                  src="https://elitiscenter.ro/wp-content/uploads/2023/05/DSC08793-Enhanced-NR-1024x683.jpg"
+                  alt="Elitis Events Center logo"
+                />
+
                 <div className="elitis-info">
                   <div className="name">Elitis Events Center</div>
-                  <div className="address">str. Făgetului 74, Cluj-Napoca</div>
+                  <div className="address">str. Făgetului 74</div>
                 </div>
               </div>
             </div>

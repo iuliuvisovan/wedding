@@ -8,15 +8,12 @@ export default function SaveTheDate() {
   const videoRef = useRef();
 
   useEffect(() => {
-    videoRef.current.playbackRate = 2;
+    videoRef.current.playbackRate = 2.2;
 
     clearInterval(playInterval);
     playInterval = setInterval(() => {
       videoRef.current.play();
-      // setTimeout(() => {
-      //   videoRef.current.pause();
-      // }, 6933);
-    }, 6000);
+    }, 5000);
   }, []);
 
   return (

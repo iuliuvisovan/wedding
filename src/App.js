@@ -5,7 +5,7 @@ import EventLocation from './components/EventLocation';
 import WereGettingMarried from './components/WereGettingMarried';
 import Schedule from './components/Schedule';
 
-export const WITH_ANIMATIONS = false
+export const WITH_ANIMATIONS = true
 
 export default function App() {
   return (

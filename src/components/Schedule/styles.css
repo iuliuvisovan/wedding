@@ -56,12 +56,18 @@
 
         img {
           width: 14px;
-          opacity: 0.4;
+          opacity: 0.35;
           margin-bottom: -1px;
         }
 
         .title {
           font-weight: 600;
+        }
+
+        .location {
+          /* font-weight: 500; */
+          /* font-size: 14px; */
+          /* opacity: 0.7; */
         }
       }
     }

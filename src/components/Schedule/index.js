@@ -15,7 +15,7 @@ export default function Schedule() {
           </div>
           <div className="event-info">
             <span className="title">Civil Ceremony</span>
-            <span>
+            <span className="location">
               <img src="https://www.svgrepo.com/show/127575/location-sign.svg" /> Parcul Central, Cluj-Napoca
             </span>
           </div>
@@ -27,7 +27,7 @@ export default function Schedule() {
           </div>
           <div className="event-info">
             <span className="title">Religious Ceremony</span>
-            <span>
+            <span className="location">
               <img src="https://www.svgrepo.com/show/127575/location-sign.svg" /> Elitis Events Center, Cluj-Napoca
             </span>
           </div>
@@ -39,7 +39,7 @@ export default function Schedule() {
           </div>
           <div className="event-info">
             <span className="title">Wedding Party</span>
-            <span>
+            <span className="location">
               <img src="https://www.svgrepo.com/show/127575/location-sign.svg" /> Elitis Events Center, Cluj-Napoca
             </span>
           </div>

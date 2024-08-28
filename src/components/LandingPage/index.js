@@ -42,7 +42,6 @@ export default function LandingPage() {
 
   return (
     <div className="screen-landing-page">
-      {/* <div className="backdrop colored"></div>*/}
       <div className="backdrop black"></div>
       <div className="title-and-subtitle">
         <div className="title">

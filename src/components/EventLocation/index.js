@@ -31,16 +31,17 @@ export default function EventLocation() {
             styles: mapStyles,
             disableDefaultUI: true,
             mapTypeControl: false,
+            keyboardShortcuts: false
           }}
         >
           <OverlayViewF position={centralParkCoordinates} mapPaneName={OverlayView.OVERLAY_MOUSE_TARGET}>
             <div className="client-marker-wrapper" onClick={() => window.open('https://maps.app.goo.gl/7bgsAGgWsF3vWr46A', '_blank')}>
               <div className="location-dot" style={{ background: '#709e33' }}></div>
               <div className="client-marker">
-                <img loading="lazy" src="https://www.zcj.ro/images/db/1_3_264128_1716653623_06420.jpg" alt="Foișor Parcul Central" />
+                <img loading="lazy" src="images/central-park.jpeg" alt="Foișor Parcul Central" />
                 <div className="elitis-info">
-                  <div className="name">Foișor Parcul Central</div>
-                  <div className="address">str. Cardinal Iuliu Hossu 55</div>
+                  <div className="name">Parcul Central</div>
+                  <div className="address">str. Iuliu Hossu, nr. 55</div>
                 </div>
               </div>
             </div>
@@ -57,7 +58,7 @@ export default function EventLocation() {
 
                 <div className="elitis-info">
                   <div className="name">Elitis Events Center</div>
-                  <div className="address">str. Făgetului 74</div>
+                  <div className="address">str. Făgetului, nr. 74</div>
                 </div>
               </div>
             </div>

@@ -142,8 +142,8 @@
     bottom: -1px;
     left: 0;
     width: 100vw;
-    height: 70px;
-    background: linear-gradient(0, #fff, #fff0);
+    height: 50px;
+    background: linear-gradient(0, #ffffff, #ffffff00);
     z-index: 1;
   }
 }

@@ -142,7 +142,7 @@ const mapStyles = [
     elementType: 'geometry',
     stylers: [
       {
-        color: '#f5f5f5',
+        color: '#f3f3f3',
       },
       {
         lightness: 20,

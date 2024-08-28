@@ -9,35 +9,31 @@ const transforms = {
 
 let intervalRef;
 
-const NUMBER_OF_IMAGES = 60;
+const NUMBER_OF_IMAGES = 30;
 export default function LandingPage() {
   // randomly select an image and remove all transforms from it, using react
   // state to force re-render
   const [selectedImageIndex, setSelectedImageIndex] = useState();
-  const [secondImageIndex, setSecondImageIndex] = useState();
 
   useEffect(() => {
-    clearInterval(intervalRef);
+    // Wait for initial animations to complete
+    setTimeout(() => {
+      clearInterval(intervalRef);
 
-    intervalRef = setInterval(() => {
-      highlightRandomImage();
-    }, 800);
+      intervalRef = setInterval(() => {
+        highlightRandomImage();
+      }, 600);
+    }, 3000);
   }, []);
 
   const highlightRandomImage = async () => {
-    const randomDuration = Math.floor(Math.random() * 0);
+    const randomDuration = Math.floor(Math.random() * 500);
 
     await wait(randomDuration);
 
     const randomIndex = Math.floor(Math.random() * NUMBER_OF_IMAGES);
 
     setSelectedImageIndex(randomIndex);
-
-    const randomIndexTwo = Math.floor(Math.random() * NUMBER_OF_IMAGES);
-
-    await wait(300);
-
-    setSecondImageIndex(randomIndexTwo);
   };
 
   return (
@@ -53,12 +49,12 @@ export default function LandingPage() {
         </div>
       </div>
       <div className="images-wrapper">
-        {new Array(30).fill(null).map((_, index) => (
+        {new Array(NUMBER_OF_IMAGES).fill(null).map((_, index) => (
           <img
             key={index}
             src={`images/landing/image${index + 1}.jpeg`}
             alt="Iuliu & Gabriela Travelling"
-            className={selectedImageIndex === index || secondImageIndex === index ? 'highlighted' : ''}
+            className={selectedImageIndex === index ? 'highlighted' : ''}
           />
         ))}
       </div>

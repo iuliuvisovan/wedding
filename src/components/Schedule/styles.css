@@ -12,7 +12,7 @@
     .line-through-hearts {
       position: absolute;
       top: 0;
-      left: 50px;
+      left: 51px;
       width: 0px;
       border-right: 7px dotted #ffb833;
       height: 400px;
@@ -34,7 +34,7 @@
         svg {
           width: 60px;
           height: 60px;
-          color: hsl(39, 100%, 60%);
+          color: hsl(39, 100%, 64%);
         }
 
         span {

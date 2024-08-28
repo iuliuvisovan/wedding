@@ -35,9 +35,9 @@ export default function EventLocation() {
         >
           <OverlayViewF position={centralParkCoordinates} mapPaneName={OverlayView.OVERLAY_MOUSE_TARGET}>
             <div className="client-marker-wrapper" onClick={() => window.open('https://maps.app.goo.gl/7bgsAGgWsF3vWr46A', '_blank')}>
-              <div className="location-dot" style={{ background: '#619f0a' }}></div>
-              <div className="client-marker" style={{ borderColor: '#619f0a' }}>
-                <img loading="lazy" src="https://www.zcj.ro/images/db/1_3_264128_1716653623_06420.jpg" alt="Elitis Events Center logo" />
+              <div className="location-dot" style={{ background: '#709e33' }}></div>
+              <div className="client-marker" style={{ borderColor: '#709e33' }}>
+                <img loading="lazy" src="https://www.zcj.ro/images/db/1_3_264128_1716653623_06420.jpg" alt="Foișor Parcul Central" />
                 <div className="elitis-info">
                   <div className="name">Foișor Parcul Central</div>
                   <div className="address">str. Cardinal Iuliu Hossu 55</div>
@@ -72,97 +72,187 @@ export default function EventLocation() {
 const mapStyles = [
   {
     featureType: 'all',
-    elementType: 'labels',
-    stylers: [{ visibility: 'off' }],
+    elementType: 'labels.text.fill',
+    stylers: [
+      {
+        saturation: 36,
+      },
+      {
+        color: '#333333',
+      },
+      {
+        lightness: 40,
+      },
+    ],
   },
   {
-    featureType: 'administrative.locality', // City names like "Cluj-Napoca"
-    elementType: 'labels.text',
-    stylers: [{ visibility: 'on' }],
+    featureType: 'all',
+    elementType: 'labels.text.stroke',
+    stylers: [
+      {
+        visibility: 'on',
+      },
+      {
+        color: '#ffffff',
+      },
+      {
+        lightness: 16,
+      },
+    ],
   },
   {
-    featureType: 'administrative.neighborhood', // Neighborhood names
-    elementType: 'labels.text',
-    stylers: [{ visibility: 'on' }],
+    featureType: 'all',
+    elementType: 'labels.icon',
+    stylers: [
+      {
+        visibility: 'off',
+      },
+    ],
   },
   {
     featureType: 'administrative',
-    elementType: 'geometry',
-    stylers: [{ visibility: 'off' }],
+    elementType: 'geometry.fill',
+    stylers: [
+      {
+        color: '#fefefe',
+      },
+      {
+        lightness: 20,
+      },
+    ],
   },
   {
-    featureType: 'water',
-    elementType: 'geometry',
-    stylers: [{ visibility: 'on' }, { color: '#e5e3df' }],
+    featureType: 'administrative',
+    elementType: 'geometry.stroke',
+    stylers: [
+      {
+        color: '#fefefe',
+      },
+      {
+        lightness: 17,
+      },
+      {
+        weight: 1.2,
+      },
+    ],
   },
   {
     featureType: 'landscape',
     elementType: 'geometry',
-    stylers: [{ visibility: 'on' }, { color: '#f5f5f2' }],
-  },
-  {
-    elementType: 'geometry',
     stylers: [
       {
-        color: '#ffecc2', // Light gold
+        color: '#f5f5f5',
+      },
+      {
+        lightness: 20,
       },
     ],
   },
-
   {
-    elementType: 'labels.text.stroke',
+    featureType: 'landscape.natural.terrain',
+    elementType: 'geometry.fill',
     stylers: [
       {
-        color: '#f5f1e6', // Light white for text stroke
+        visibility: 'on',
+      },
+      {
+        color: '#ede5d0',
       },
     ],
   },
-
-  {
-    featureType: 'administrative.land_parcel',
-    elementType: 'geometry.stroke',
-    stylers: [
-      {
-        color: '#dcd2be', // Light gold
-      },
-    ],
-  },
-
-  {
-    featureType: 'landscape.natural',
-    elementType: 'geometry',
-    stylers: [
-      {
-        color: '#c5bc86', // Light gold
-      },
-    ],
-  },
-
   {
     featureType: 'poi',
-    elementType: 'labels.text.fill',
+    elementType: 'geometry',
     stylers: [
       {
-        color: '#93817c', // Medium gold
+        color: '#f5f5f5',
+      },
+      {
+        lightness: 21,
       },
     ],
   },
   {
     featureType: 'poi.park',
-    elementType: 'geometry.fill',
-    stylers: [
-      {
-        color: '#a5b076', // Olive gold
-      },
-    ],
-  },
-
-  {
-    featureType: 'road',
     elementType: 'geometry',
     stylers: [
       {
-        color: '#ffbd23', // Light white road
+        color: '#dedede',
+      },
+      {
+        lightness: 21,
+      },
+    ],
+  },
+  {
+    featureType: 'road.highway',
+    elementType: 'geometry.fill',
+    stylers: [
+      {
+        color: '#ffa300',
+      },
+      {
+        lightness: 17,
+      },
+    ],
+  },
+  {
+    featureType: 'road.highway',
+    elementType: 'geometry.stroke',
+    stylers: [
+      {
+        color: '#ffffff',
+      },
+      {
+        lightness: 29,
+      },
+      {
+        weight: 0.2,
+      },
+    ],
+  },
+  {
+    featureType: 'road.highway',
+    elementType: 'labels',
+    stylers: [
+      {
+        visibility: 'off',
+      },
+    ],
+  },
+  {
+    featureType: 'road.highway',
+    elementType: 'labels.text',
+    stylers: [
+      {
+        visibility: 'off',
+      },
+    ],
+  },
+  {
+    featureType: 'road.highway',
+    elementType: 'labels.icon',
+    stylers: [
+      {
+        visibility: 'off',
+      },
+    ],
+  },
+  {
+    featureType: 'road.highway.controlled_access',
+    elementType: 'geometry',
+    stylers: [
+      {
+        visibility: 'off',
+      },
+    ],
+  },
+  {
+    featureType: 'road.highway.controlled_access',
+    elementType: 'geometry.fill',
+    stylers: [
+      {
+        visibility: 'on',
       },
     ],
   },
@@ -171,69 +261,85 @@ const mapStyles = [
     elementType: 'geometry',
     stylers: [
       {
-        color: '#ffbd23', // Very light white
+        color: '#ffffff',
       },
-    ],
-  },
-
-  {
-    featureType: 'road.highway',
-    elementType: 'geometry.stroke',
-    stylers: [
       {
-        color: '#e9bc62', // Slightly darker gold
-      },
-    ],
-  },
-
-  {
-    featureType: 'road.local',
-    elementType: 'labels.text.fill',
-    stylers: [
-      {
-        color: '#ffbd23', // Dark gold
-      },
-    ],
-  },
-
-  {
-    featureType: 'water',
-    elementType: 'labels.text.fill',
-    stylers: [
-      {
-        color: '#92998d', // Gray-gold for water labels
-      },
-    ],
-  },
-
-  {
-    featureType: 'administrative.locality',
-    elementType: 'labels',
-    stylers: [
-      {
-        visibility: 'simplified',
+        lightness: 18,
       },
     ],
   },
   {
-    featureType: 'administrative.locality',
-    elementType: 'labels.text',
+    featureType: 'road.arterial',
+    elementType: 'geometry.fill',
     stylers: [
       {
         visibility: 'on',
       },
       {
-        weight: 5.5,
+        color: '#ffa300',
       },
     ],
   },
-
   {
-    featureType: 'administrative.land_parcel',
-    elementType: 'labels',
+    featureType: 'road.local',
+    elementType: 'geometry',
     stylers: [
       {
-        visibility: 'off',
+        color: '#ffffff',
+      },
+      {
+        lightness: 16,
+      },
+    ],
+  },
+  {
+    featureType: 'road.local',
+    elementType: 'geometry.fill',
+    stylers: [
+      {
+        visibility: 'on',
+      },
+      {
+        color: '#ffce00',
+      },
+      {
+        weight: '1.21',
+      },
+    ],
+  },
+  {
+    featureType: 'transit',
+    elementType: 'geometry',
+    stylers: [
+      {
+        color: '#f2f2f2',
+      },
+      {
+        lightness: 19,
+      },
+    ],
+  },
+  {
+    featureType: 'water',
+    elementType: 'geometry',
+    stylers: [
+      {
+        color: '#e9e9e9',
+      },
+      {
+        lightness: 17,
+      },
+    ],
+  },
+  {
+    featureType: 'water',
+    elementType: 'geometry.fill',
+    stylers: [
+      {
+        visibility: 'on',
+      },
+      {
+        color: '#d1d1d1',
       },
     ],
   },

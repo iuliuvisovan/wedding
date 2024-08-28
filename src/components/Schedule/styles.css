@@ -14,7 +14,7 @@
       top: 0;
       left: 50px;
       width: 0px;
-      border-right: 7px dotted hsl(39, 100%, 60%);
+      border-right: 7px dotted #ffb833;
       height: 400px;
       z-index: 0;
       pointer-events: none;

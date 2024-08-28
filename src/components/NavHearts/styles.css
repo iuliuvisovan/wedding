@@ -5,12 +5,12 @@
   position: fixed;
   top: calc(88dvh - 60px);
   right: 10px;
-  z-index: 101;
+  z-index: 200;
 
   .heart {
     line-height: 0.7em;
     color: white;
-    filter: drop-shadow(0 0 -24px rgba(50, 40, 20, 0.2));
+    filter: drop-shadow(0 0 2px rgba(50, 40, 20, 0.2));
     /* opacity: 0.6; */
 
     &.selected {

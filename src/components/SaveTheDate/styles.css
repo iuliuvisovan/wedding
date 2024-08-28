@@ -1,65 +1,84 @@
-.save-the-date-screen {
-  width: calc(100vw - 16px * 2);
-  box-shadow: 0px 0px 8px #0003;
-  border-radius: 16px;
-
+.card-wrapper {
   position: relative;
-  z-index: 101;
-  padding-bottom: 14px;
-  padding-top: 12px;
-  background: white;
-  margin: -24px 16px;
   margin-top: -120px;
-  overflow: hidden;
-  height: 240px;
 
-  background: url('../../../public/images/flower-bg-new.jpg') 100% 100%;
-
-  /* background of full width image */
-  background-size: cover;
-
-  img {
-    width: 100vw;
-    margin-left: -24px;
-    filter: brightness(60%) hue-rotate(28deg);
-  }
-
-  .video-wrapper {
-    position: absolute;
-    left: 0.5%;
-    top: 76%;
-    width: calc((100vw - 16px * 2) / 4.13);
-    z-index: 5;
-    transform: rotate(-8deg);
+  .face {
+    width: calc(100vw - 16px * 2);
+    box-shadow: 0px 0px 8px #0003;
+    border-radius: 16px;
+    z-index: 101;
+    margin: 0 16px;
+    background: url('../../../public/images/flower-bg-new.jpg') 100% 100%;
+    background-size: cover;
     overflow: hidden;
-    clip-path: polygon(100% 0, 86% 86%, 44% 64%, 0 40%, 0 0);
+    position: relative;
+    height: 240px;
+    transition: transform 0.5s ease-in-out;
+    backface-visibility: hidden;
+    padding-top: 14px;
+    padding-bottom: 12px;
 
-    filter: brightness(1.25) saturate(0.68);
-    mix-blend-mode: darken;
+    &.were-getting-married {
+      position: absolute;
+      top: 0;
+      left: 0;
 
-    video {
-      width: calc((100vw - 16px * 2) / 2.4);
+      transform: rotateX(180deg);
+
+      &.flipped {
+        transform: rotateX(0deg);
+      }
     }
-  }
 
-  h1 {
-    font-family: 'Parisienne', cursive;
-    background: linear-gradient(0, #ffd780, hsl(41, 100%, 50%), hsl(41, 100%, 75%));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 50px;
-    margin: 0;
-  }
+    &.save-the-date {
+      &.flipped {
+        transform: rotateX(180deg);
+      }
 
-  h2 {
-    font-size: 40px;
-    font-weight: 600;
-    letter-spacing: 4px;
-    margin-top: 20px;
-    margin-bottom: 0;
-    color: #fff;
-    text-shadow: 0px 0px 4px hsla(42, 100%, 37%, 0.25);
+      img {
+        width: 100vw;
+        margin-left: -24px;
+        filter: brightness(60%) hue-rotate(28deg);
+      }
+
+      .video-wrapper {
+        position: absolute;
+        left: 0.5%;
+        top: 76%;
+        width: calc((100vw - 16px * 2) / 4.13);
+        z-index: 5;
+        transform: rotate(-8deg);
+        overflow: hidden;
+        clip-path: polygon(100% 0, 86% 86%, 44% 64%, 0 40%, 0 0);
+
+        filter: brightness(1.25) saturate(0.68);
+        mix-blend-mode: darken;
+
+        video {
+          width: calc((100vw - 16px * 2) / 2.4);
+        }
+      }
+
+      h1 {
+        font-family: 'Parisienne', cursive;
+        background: linear-gradient(0, #ffd780, hsl(41, 100%, 50%), hsl(41, 100%, 75%));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 50px;
+        margin: 0;
+      }
+
+      h2 {
+        font-size: 40px;
+        font-weight: 600;
+        letter-spacing: 4px;
+        margin-top: 20px;
+        margin-bottom: 0;
+        color: #fff;
+        text-shadow: 0px 0px 4px hsla(42, 100%, 37%, 0.25);
+      }
+    }
   }
 }
 

@@ -6,7 +6,7 @@ import { WITH_ANIMATIONS } from '../../App';
 
 export default function WereGettingMarried() {
   return (
-    <div className="were-getting-married">
+    <div className="were-getting-married-screen">
       <h2>We're getting</h2>
       <h1>Married!</h1>
       {/* <Lottie animationData={FireworksAnimations} loop={true} /> */}

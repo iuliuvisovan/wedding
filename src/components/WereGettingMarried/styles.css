@@ -1,9 +1,8 @@
-.were-getting-married {
-  padding-top: 230px;
-  padding-bottom: 230px;
+.were-getting-married-screen {
   font-family: 'Parisienne', cursive;
   position: relative;
   z-index: 100;
+  padding-top: 48px;
 
   .animation-wrapper {
     position: absolute;
@@ -24,7 +23,7 @@
     margin: 0;
     letter-spacing: -2px;
     text-align: right;
-    padding-right: 32px;
+    padding-right: 24px;
   }
 
   h1 {
@@ -35,8 +34,8 @@
     margin: 0;
 
     letter-spacing: -5px;
-    font-size: 100px;
+    font-size: 90px;
     padding-right: 12px;
-    margin-top: -16px;
+    margin-top: -8px;
   }
 }

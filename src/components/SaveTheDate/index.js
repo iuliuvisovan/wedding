@@ -14,7 +14,7 @@ export default function SaveTheDate() {
   }, []);
 
   return (
-    <div className="screen-two">
+    <div className="save-the-date-screen">
       <div className="video-wrapper">
         <video ref={videoRef} src="images/ladybug-cut.mp4" loop muted="muted" playsInline="playsinline"></video>
       </div>

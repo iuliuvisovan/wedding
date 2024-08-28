@@ -32,7 +32,7 @@
     z-index: 5;
     transform: rotate(-8deg);
     overflow: hidden;
-    clip-path: polygon(100% 0, 100% 100%, 49% 64%, 0 40%, 0 0);
+    clip-path: polygon(100% 0, 86% 86%, 44% 64%, 0 40%, 0 0);
 
     filter: brightness(1.25) saturate(0.68);
     mix-blend-mode: darken;

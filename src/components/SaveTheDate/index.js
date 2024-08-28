@@ -2,21 +2,27 @@ import { useEffect } from 'react';
 import { useRef } from 'react';
 import './styles.css';
 
+let playInterval;
+
 export default function SaveTheDate() {
   const videoRef = useRef();
 
   useEffect(() => {
     videoRef.current.playbackRate = 2;
 
-    setInterval(() => {
+    clearInterval(playInterval);
+    playInterval = setInterval(() => {
       videoRef.current.play();
-    }, 2000);
+      // setTimeout(() => {
+      //   videoRef.current.pause();
+      // }, 6933);
+    }, 6000);
   }, []);
 
   return (
     <div className="save-the-date-screen">
       <div className="video-wrapper">
-        <video ref={videoRef} src="images/ladybug-cut.mp4" loop muted="muted" playsInline="playsinline"></video>
+        <video ref={videoRef} src="images/ladybug.mp4" loop muted="muted" playsInline="playsinline"></video>
       </div>
 
       <img src={`images/save-the-date.png`} />

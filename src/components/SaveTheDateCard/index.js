@@ -11,6 +11,7 @@ export default function SaveTheDate() {
   const videoRef = useRef();
   const [isFlipped, setIsFlipped] = useState(false);
   const [shouldShowAnimation, setShouldShowAnimation] = useState(false);
+  const [isPastCheckPoint, setIsPastCheckPoint] = useState(false);
 
   useEffect(() => {
     videoRef.current.playbackRate = 2.2;
@@ -53,6 +54,7 @@ export default function SaveTheDate() {
 
     if (window.scrollY > 500) {
       window.showSchedule();
+      setIsPastCheckPoint(true);
     }
   };
 
@@ -67,10 +69,11 @@ export default function SaveTheDate() {
         <h2>
           17<span className="gold">.</span>05<span className="gold">.</span>2025
         </h2>
+        {!isPastCheckPoint && <h4>because...</h4>}
       </div>
       <div className={'face were-getting-married ' + (isFlipped ? 'flipped' : '')}>
         <div className="were-getting-married-screen">
-          <h2>We're getting</h2>
+          <h2>we're getting</h2>
         </div>
       </div>
       {shouldShowAnimation && <h1 className="married">MARRIED</h1>}

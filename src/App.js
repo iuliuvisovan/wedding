@@ -1,6 +1,6 @@
 import NavHearts from './components/NavHearts';
 import LandingPage from './components/LandingPage';
-import SaveTheDateCard from './components/SaveTheDate';
+import SaveTheDateCard from './components/SaveTheDateCard';
 import EventLocation from './components/EventLocation';
 import Schedule from './components/Schedule';
 

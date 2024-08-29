@@ -101,14 +101,7 @@ export default function SaveTheDate() {
 
       {WITH_ANIMATIONS && showsConfetti && (
         <div className="animation-wrapper">
-          <DotLottieReact
-            width="100vw"
-            src="https://assets-v2.lottiefiles.com/a/b1b163e6-1165-11ee-8de3-13c51904addb/8l4FM0Hz1c.lottie"
-            loop
-            className="fireworks"
-            autoplay
-            speed={1}
-          />
+          <DotLottieReact width="100vw" src="images/fireworks.lottie" loop className="fireworks" autoplay speed={1} />
         </div>
       )}
     </div>

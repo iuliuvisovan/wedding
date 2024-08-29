@@ -9,7 +9,7 @@
     top: 76vh;
     left: -100px;
     z-index: 10;
-    animation: fly 10s linear 6s infinite;
+    animation: fly 10s linear 5s infinite;
     filter: drop-shadow(-2px 4px 2px rgba(0, 0, 0, 0.4));
 
     .plane {
@@ -196,11 +196,17 @@
   0% {
     transform: translate(0, 0) rotate(-21deg);
   }
-  50% {
+  30% {
     transform: translate(140vw, -42vw) rotate(-21deg);
   }
-  100% {
-    transform: translate(140vw, -40vw) rotate(-21deg);
+  31% {
+    transform: translate(140vw, -42vw) rotate(-130deg);
+  }
+  40% {
+    transform: translate(140vw, -42vw) rotate(-130deg);
+  }
+  90% {
+    transform: translate(20vw, -170vw) rotate(-130deg);
   }
 }
 

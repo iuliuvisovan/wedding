@@ -8,7 +8,7 @@
   &:active {
     transition: filter 0.1s;
 
-    filter: brightness(1.1);
+    filter: brightness(1.06);
   }
 
   .face {

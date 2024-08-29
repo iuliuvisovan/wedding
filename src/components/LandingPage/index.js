@@ -42,6 +42,9 @@ export default function LandingPage() {
 
   return (
     <div className="screen-landing-page">
+      <div className="plane-wrapper">
+        <img src={`images/plane.png`} alt="Iuliu & Gabriela Travelling in a Small Cute Plane" className="plane" />
+      </div>
       {WITH_ANIMATIONS && <div className="backdrop black"></div>}
       <div className="title-and-subtitle">
         <div className="title">

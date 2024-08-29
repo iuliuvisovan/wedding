@@ -1,6 +1,15 @@
 .card-wrapper {
   position: relative;
-  margin-top: -120px;
+  margin-top: -90px;
+  transition: filter 1.5s;
+
+  z-index: 300;
+
+  &:active {
+    transition: filter 0.1s;
+
+    filter: brightness(1.1);
+  }
 
   .face {
     width: calc(100vw - 16px * 2);
@@ -13,7 +22,7 @@
     overflow: hidden;
     position: relative;
     height: 240px;
-    transition: transform 0.6s;
+    transition: transform 0.6s, box-shadow 0.1s;
     backface-visibility: hidden;
     padding-top: 14px;
     padding-bottom: 12px;

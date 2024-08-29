@@ -1,18 +1,9 @@
 import './styles.css';
 import { ReactComponent as HeartIcon } from './heart.svg';
-import { useEffect, useState } from 'react';
 
 export default function Schedule() {
-  const [isShowingSchedule, setIsShowingSchedule] = useState(false);
-
-  useEffect(() => {
-    window.showSchedule = () => {
-      setIsShowingSchedule(true);
-    };
-  }, []);
-
   return (
-    <div className="schedule-screen" style={{ opacity: isShowingSchedule ? 1 : 0 }}>
+    <div className="schedule-screen">
       <div className="top-gradient"></div>
 
       <div className="timeline">

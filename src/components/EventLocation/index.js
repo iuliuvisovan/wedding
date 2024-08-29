@@ -31,7 +31,7 @@ export default function EventLocation() {
             styles: mapStyles,
             disableDefaultUI: true,
             mapTypeControl: false,
-            keyboardShortcuts: false
+            keyboardShortcuts: false,
           }}
         >
           <OverlayViewF position={centralParkCoordinates} mapPaneName={OverlayView.OVERLAY_MOUSE_TARGET}>

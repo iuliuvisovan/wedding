@@ -1,0 +1,29 @@
+.meet-the-godparents {
+  padding: 40px 24px;
+  text-align: left;
+  font-family: 'Parisienne', cursive;
+
+
+  h1 {
+    background: linear-gradient(0, #ffd780, hsl(41, 100%, 60%), hsl(41, 100%, 75%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 56px;
+    margin: 0;
+    margin-top: -18px;
+    padding-left: 3px;
+    letter-spacing: -3px;
+    /* position: relative; */
+    /* z-index: 1; */
+  }
+
+  h2 {
+    font-size: 40px;
+    letter-spacing: -2px;
+    margin-bottom: 0;
+    padding-left: 40px;
+    text-align: left;
+    color: #c5c5c5;
+  }
+}

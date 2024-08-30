@@ -7,7 +7,7 @@ import EventLocation from './components/EventLocation';
 import Schedule from './components/Schedule';
 import MeetTheGodparents from './components/MeetTheGodparents';
 
-export const WITH_ANIMATIONS = false;
+export const WITH_ANIMATIONS = true;
 
 export default function App() {
   return (
@@ -25,7 +25,7 @@ export default function App() {
 }
 
 const CollapsedScreens = ({ children }) => {
-  const [isExpanded, setIsExpanded] = useState(true);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   useEffect(() => {
     window.showCollapsedScreens = () => {

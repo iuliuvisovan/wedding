@@ -7,6 +7,7 @@ export default function MeetTheGodparents() {
       <div className="meet">meet...</div>
       <div className="the-godparents">The Godparents</div>
       <div className="img-wrapper">
+        <div className="top-gradient"></div>
         <img src="images/the-godparents.jpg" />
         <div className="names">
           <div className="family-name">Branic</div>

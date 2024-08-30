@@ -145,6 +145,44 @@
       margin-left: -20vw;
     }
   }
+
+  .dots-wrapper {
+    overflow: hidden;
+    display: inline-block;
+    transform: translateY(5px);
+
+    .dots {
+      transform: translateX(-4px);
+      animation: show-dots 3s infinite;
+    }
+  }
+}
+
+@keyframes show-dots {
+  0% {
+    transform: translateX(-12px);
+  }
+  24.99% {
+    transform: translateX(-12px);
+  }
+  25% {
+    transform: translateX(-8px);
+  }
+  49.99% {
+    transform: translateX(-8px);
+  }
+  50% {
+    transform: translateX(-4px);
+  }
+  74.99% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 
 @keyframes move-to-left {

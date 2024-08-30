@@ -3,27 +3,95 @@
   text-align: left;
   font-family: 'Parisienne', cursive;
 
-
-  h1 {
-    background: linear-gradient(0, #ffd780, hsl(41, 100%, 60%), hsl(41, 100%, 75%));
+  .the-godparents {
+    background: linear-gradient(0, #ffd780, hsl(41, 100%, 50%), hsl(41, 100%, 75%));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 56px;
+    font-size: 58px;
     margin: 0;
     margin-top: -18px;
     padding-left: 3px;
-    letter-spacing: -3px;
+    /* letter-spacing: -3px; */
     /* position: relative; */
     /* z-index: 1; */
   }
 
-  h2 {
+  .meet {
     font-size: 40px;
-    letter-spacing: -2px;
-    margin-bottom: 0;
+    margin-bottom: -24px;
     padding-left: 40px;
     text-align: left;
     color: #c5c5c5;
+  }
+
+  .img-wrapper {
+    position: relative;
+
+    img {
+      width: 100vw;
+      margin-left: -24px;
+    }
+
+    .names {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      color: white;
+      width: 100%;
+
+      position: absolute;
+      left: 50%;
+      bottom: 24px;
+      transform: translate(-50%, 0);
+      z-index: 2;
+      text-align: center;
+      padding-left: 34px;
+
+      &.on-top {
+        /* background: red; */
+        clip-path: polygon(50% 52%, 50% 64%, 60% 60%);
+
+        .and-symbol {
+          opacity: 0;
+        }
+      }
+
+      .family-name {
+        color: #fff;
+        margin: 0;
+        font-size: 38px;
+        margin-bottom: -40px;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);
+        font-weight: 500;
+      }
+
+      .first-names {
+        margin: 0;
+        font-size: 50px;
+        white-space: nowrap;
+        font-weight: 600;
+        letter-spacing: -3px;
+        /* font-weight: 600; */
+      }
+
+      .and-symbol {
+        background: linear-gradient(0, hsl(41, 100%, 75%), hsl(41, 100%, 45%), hsl(41, 100%, 75%));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 86px;
+        margin: 0 -20px;
+        display: inline-block;
+        font-weight: 400;
+        transform: translateY(4px) rotate(-8deg);
+      }
+
+      .first-name {
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.025);
+        position: relative;
+      }
+    }
   }
 }

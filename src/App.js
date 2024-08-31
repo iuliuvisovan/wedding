@@ -6,8 +6,9 @@ import SaveTheDateCard from './components/SaveTheDateCard';
 import EventLocation from './components/EventLocation';
 import Schedule from './components/Schedule';
 import MeetTheGodparents from './components/MeetTheGodparents';
+import AndTheParents from './components/AndTheParents';
 
-export const WITH_ANIMATIONS = true;
+export const WITH_ANIMATIONS = false;
 
 export default function App() {
   return (
@@ -19,13 +20,14 @@ export default function App() {
         <Schedule />
         <EventLocation />
         <MeetTheGodparents />
+        <AndTheParents />
       </CollapsedScreens>
     </div>
   );
 }
 
 const CollapsedScreens = ({ children }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(!WITH_ANIMATIONS);
 
   useEffect(() => {
     window.showCollapsedScreens = () => {

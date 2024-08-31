@@ -1,0 +1,102 @@
+.and-the-parents {
+  padding: 40px 24px;
+  padding-bottom: 100px;
+  text-align: left;
+
+  .and-our-beloved {
+    font-size: 38px;
+    margin-bottom: -20px;
+    /* padding-left: 20px; */
+    text-align: left;
+    color: #c5c5c5;
+    font-family: 'Parisienne', cursive;
+  }
+
+  .parents {
+    background: linear-gradient(0, #ffd780, hsl(41, 100%, 60%), hsl(41, 100%, 75%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 90px;
+    margin: 0;
+    font-family: 'Parisienne', cursive;
+    margin-bottom: -22px;
+  }
+
+  .names {
+    color: #cfcfcf;
+    margin-top: 40px;
+    text-align: center;
+    overflow: hidden;
+
+    .family-name-wrapper {
+      margin-bottom: -22px;
+      position: relative;
+
+      .family-name {
+        font-family: 'Parisienne', cursive;
+        background: linear-gradient(0, #ffd780, hsl(41, 100%, 75%), hsl(41, 100%, 60%), hsl(41, 100%, 75%));
+        /* background: linear-gradient(0, hsl(33 98% 49% / 1), hsl(33 98% 40% / 1), hsl(33 98% 49% / 1)); */
+        /* background: linear-gradient(0, hsl(86, 51%, 61%), hsl(86, 51%, 42%), hsl(86, 51%, 61%)); */
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin: 0;
+        font-size: 64px;
+        /* text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25); */
+        font-weight: 500;
+      }
+
+      .comma {
+        color: #ffc751;
+        font-size: 24px;
+        display: block;
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: auto;
+        /* width: 4px; */
+        bottom: 22px;
+        transform: translate(-18px, 8px) rotate(19deg);
+        z-index: 10;
+      }
+    }
+
+    .first-names {
+      /* font-family: 'Roboto', sans-serif; */
+      margin: 0;
+      font-size: 46px;
+      white-space: nowrap;
+      /* font-weight: 600; */
+      display: flex;
+      flex-direction: column;
+      font-weight: 600;
+
+      .first-name {
+        /* text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05); */
+        position: relative;
+      }
+
+      .and-symbol {
+        font-family: 'Parisienne', cursive;
+        /* background: linear-gradient(0, hsl(86, 51%, 61%), hsl(86, 51%, 46%), hsl(86, 51%, 61%)); */
+        /* background: linear-gradient(0, hsl(33 98% 49% / 1), hsl(33 98% 40% / 1), hsl(33 98% 49% / 1)); */
+        /* background: linear-gradient(0, #ffd780, hsl(41, 100%, 60%), hsl(41, 100%, 75%)); */
+        background: linear-gradient(0, #ffd780, hsl(41, 100%, 75%), hsl(41, 100%, 60%), hsl(41, 100%, 75%));
+
+
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 64px;
+        margin: -48px;
+        display: inline-block;
+        font-weight: 500;
+        position: relative;
+        z-index: 1;
+        transform: translateY(4px) rotate(-8deg);
+        /* text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1); */
+      }
+    }
+  }
+}

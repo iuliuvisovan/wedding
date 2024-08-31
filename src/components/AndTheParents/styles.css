@@ -30,7 +30,7 @@
     overflow: hidden;
 
     .family-name-wrapper {
-      margin-bottom: -22px;
+      margin-top: -12px;
       position: relative;
 
       .family-name {
@@ -42,7 +42,7 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin: 0;
-        font-size: 64px;
+        font-size: 68px;
         /* text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25); */
         font-weight: 500;
       }
@@ -82,8 +82,7 @@
         /* background: linear-gradient(0, hsl(86, 51%, 61%), hsl(86, 51%, 46%), hsl(86, 51%, 61%)); */
         /* background: linear-gradient(0, hsl(33 98% 49% / 1), hsl(33 98% 40% / 1), hsl(33 98% 49% / 1)); */
         /* background: linear-gradient(0, #ffd780, hsl(41, 100%, 60%), hsl(41, 100%, 75%)); */
-        background: linear-gradient(0, #ffd780, hsl(41, 100%, 75%), hsl(41, 100%, 60%), hsl(41, 100%, 75%));
-
+        background: linear-gradient(0, #ffd780, hsl(41, 100%, 75%), hsl(41, 100%, 65%), hsl(41, 100%, 75%));
 
         background-clip: text;
         -webkit-background-clip: text;

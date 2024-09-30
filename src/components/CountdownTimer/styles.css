@@ -67,11 +67,11 @@
 
 /* Animations */
 .prev {
-  animation: slideUpPrev 0.5s forwards;
+  animation: slideUpPrev 0.9s forwards;
 }
 
 .next {
-  animation: slideUpNext 0.5s forwards;
+  animation: slideUpNext 0.9s forwards;
 }
 
 @keyframes slideUpPrev {

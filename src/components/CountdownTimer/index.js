@@ -16,7 +16,7 @@ function AnimatedUnit({ value, label }) {
         // After animation, update the displayed value
         setIsAnimating(false);
         setDisplayValue(value);
-      }, 500); // Duration of the animation
+      }, 900); // Duration of the animation
 
       return () => clearTimeout(timeout);
     }

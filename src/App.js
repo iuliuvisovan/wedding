@@ -7,6 +7,7 @@ import EventLocation from './components/EventLocation';
 import Schedule from './components/Schedule';
 import MeetTheGodparents from './components/MeetTheGodparents';
 import AndTheParents from './components/AndTheParents';
+import Summary from './components/Summary';
 
 export const WITH_ANIMATIONS = false;
 
@@ -21,6 +22,7 @@ export default function App() {
         <EventLocation />
         <MeetTheGodparents />
         <AndTheParents />
+        <Summary />
       </CollapsedScreens>
     </div>
   );

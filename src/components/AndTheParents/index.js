@@ -17,7 +17,7 @@ export default function MeetTheGodparents() {
           <div className="comma">,</div>
         </div>
       </div>
-      <div className="names">
+      <div className="names" style={{ marginTop: 24 }}>
         <div className="first-names">
           <span className="first-name">Elena</span>
           <span className="and-symbol">&</span>

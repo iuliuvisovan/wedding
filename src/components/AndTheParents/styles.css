@@ -4,28 +4,29 @@
   text-align: left;
 
   .and-our-beloved {
-    font-size: 38px;
+    font-size: 42px;
     margin-bottom: -20px;
     /* padding-left: 20px; */
     text-align: left;
-    color: #c3c3c3;
+    color: #c7c5c3;
     font-family: 'Parisienne', cursive;
   }
 
   .parents {
-    background: linear-gradient(0, #ffd780, hsl(41, 100%, 60%), hsl(41, 100%, 75%));
+    background: linear-gradient(0, hsl(36 98% 55%), hsl(36 98% 45%));
+    /* background: linear-gradient(0, #ffd780, hsl(41, 100%, 60%), hsl(41, 100%, 75%)); */
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 84px;
+    font-size: 76px;
     margin: 0;
     font-family: 'Parisienne', cursive;
     margin-bottom: -22px;
   }
 
   .names {
-    color: #c3c3c3;
-    margin-top: 40px;
+    color: #c7c5c3;
+    margin-top: 48px;
     text-align: center;
     overflow: hidden;
 
@@ -35,8 +36,8 @@
 
       .family-name {
         font-family: 'Parisienne', cursive;
-        background: linear-gradient(0, #ffd780, hsl(41, 100%, 70%), hsl(41, 100%, 60%), hsl(41, 100%, 75%));
-        /* background: linear-gradient(0, hsl(33 98% 49% / 1), hsl(33 98% 40% / 1), hsl(33 98% 49% / 1)); */
+        /* background: linear-gradient(0, #ffd780, hsl(41, 100%, 70%), hsl(41, 100%, 60%), hsl(41, 100%, 75%)); */
+        background: linear-gradient(0, hsl(36 98% 49%), hsl(36 98% 45%));
         /* background: linear-gradient(0, hsl(86, 51%, 61%), hsl(86, 51%, 42%), hsl(86, 51%, 61%)); */
         background-clip: text;
         -webkit-background-clip: text;
@@ -48,7 +49,7 @@
       }
 
       .comma {
-        color: #ffc751;
+        color: #e98d04;
         font-size: 24px;
         display: block;
         position: absolute;
@@ -57,7 +58,7 @@
         margin: auto;
         /* width: 4px; */
         bottom: 22px;
-        transform: translate(-18px, 8px) rotate(19deg);
+        transform: translate(-20px, 6px) rotate(19deg);
         z-index: 10;
       }
     }
@@ -82,7 +83,8 @@
         /* background: linear-gradient(0, hsl(86, 51%, 61%), hsl(86, 51%, 46%), hsl(86, 51%, 61%)); */
         /* background: linear-gradient(0, hsl(33 98% 49% / 1), hsl(33 98% 40% / 1), hsl(33 98% 49% / 1)); */
         /* background: linear-gradient(0, #ffd780, hsl(41, 100%, 60%), hsl(41, 100%, 75%)); */
-        background: linear-gradient(0, #ffd780, hsl(41, 100%, 75%), hsl(41, 100%, 65%), hsl(41, 100%, 75%));
+        /* background: linear-gradient(0, #ffd780, hsl(41, 100%, 75%), hsl(41, 100%, 65%), hsl(41, 100%, 75%)); */
+        background: linear-gradient(0, hsl(36 98% 55%), hsl(36 98% 40%));
 
         background-clip: text;
         -webkit-background-clip: text;

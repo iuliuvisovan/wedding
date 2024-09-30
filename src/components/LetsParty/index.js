@@ -6,7 +6,7 @@ export default function LetsParty() {
   return (
     <div className="lets-party">
       <span>
-        Let's make <span className="colored">memories</span> together!
+        Come celebrate with us!
       </span>
     </div>
   );

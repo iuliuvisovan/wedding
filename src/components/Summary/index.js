@@ -27,7 +27,7 @@ export default function Summary() {
           <div className="title">Iuliu & Gabriela's</div>
           <div className="wedding">Wedding</div>
         </div>
-        <div className="section" style={{ marginTop: 8 }}>
+        <div className="section">
           <div className="date">17 May, 2025</div>
           <div className="location">Cluj-Napoca, Romania</div>
         </div>

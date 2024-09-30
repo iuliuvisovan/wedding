@@ -1,6 +1,6 @@
 .summary {
   padding: 8px;
-  margin-bottom: 150px;
+  margin-bottom: 250px;
   text-align: left;
   margin-top: 24px;
 
@@ -54,15 +54,15 @@
     position: relative;
     color: white;
     font-size: 24px;
-    padding: 24px;
+    padding: 16px;
     font-weight: 500;
     justify-content: space-between;
     box-shadow: 0px 0px 8px #0003;
     border-radius: 32px;
     z-index: 10;
     background: black;
-    background: radial-gradient(ellipse farthest-corner at right bottom, #fedb37 0%, #fdb931 8%, #9f7928 30%, #8a6e2f 40%, transparent 80%),
-      radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #ffffac 8%, #d1b464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    /* background: radial-gradient(ellipse farthest-corner at right bottom, #fedb37 0%, #fdb931 8%, #9f7928 30%, #8a6e2f 40%, transparent 80%),
+      radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #ffffac 8%, #d1b464 25%, #5d4a1f 62.5%, #5d4a1f 100%); */
 
     .bg-image {
       position: absolute;
@@ -71,9 +71,9 @@
       width: calc(100vw - 16px);
       height: 100%;
       object-fit: cover;
-      filter: blur(0px) brightness(0.5);
+      filter: blur(0px) brightness(0.7);
       z-index: -1;
-      opacity: 0.6;
+      opacity: 0.7;
     }
 
     .section {
@@ -103,7 +103,7 @@
     .title {
       font-family: 'Parisienne', cursive;
       font-weight: 400;
-      font-size: 40px;
+      font-size: 36px;
       text-align: center;
       position: relative;
       z-index: 2;
@@ -111,22 +111,25 @@
 
     .wedding {
       font-family: 'Parisienne', cursive;
-      font-size: 65px;
-      color: hsl(41, 100%, 75%);
+      font-size: 50px;
+      color: hsl(40, 100%, 70%);
       margin-top: -20px;
       margin-left: -15px;
     }
 
     .date {
       font-size: 40px;
-      font-weight: 500;
+      /* font-weight: 600; */
+      font-family: 'Raleway';
+
       /* letter-spacing: 3px; */
     }
 
     .location {
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 400;
-      margin-top: -2px;
+      margin-top: -4px;
+      /* font-family: 'Old Standard TT'; */
       /* letter-spacing: 1.8px; */
     }
   }

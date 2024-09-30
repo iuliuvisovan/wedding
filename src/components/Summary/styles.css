@@ -1,31 +1,38 @@
 .summary {
-  padding: 16px;
-  padding-bottom: 100px;
+  padding: 8px;
+  margin-bottom: 150px;
   text-align: left;
+  margin-top: 24px;
 
   .countdown-timer {
     display: flex;
     justify-content: center;
-    padding-bottom: 40px;
-    margin-bottom: -40px;
-    box-shadow: 0px 0px 8px #0003;
-    border-top-left-radius: 32px;
-    border-top-right-radius: 32px;
+    /* box-shadow: 0px 0px 8px #0002; */
+    width: 100vw;
+    margin-left: -8px;
+    margin-bottom: 80px;
     overflow: hidden;
 
+    background: linear-gradient(0, #0002, #000, #0002);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
     .square {
-      /* box-shadow: 0px 0px 8px #0003; */
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 4px;
       width: 100px;
-      box-shadow: 4px -6px 8px #0001;
-      flex: 1;
+      /* border-right: 1px solid gray; */
+      width: 75px;
+      height: 50px;
+      /* border-radius: 8px; */
 
       .value {
         font-weight: 700;
-        font-size: 18px;
+        font-size: 40px;
+        /* font-family: 'Parisienne'; */
       }
 
       .label {
@@ -53,6 +60,9 @@
     box-shadow: 0px 0px 8px #0003;
     border-radius: 32px;
     z-index: 10;
+    background: black;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #fedb37 0%, #fdb931 8%, #9f7928 30%, #8a6e2f 40%, transparent 80%),
+      radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #ffffac 8%, #d1b464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
 
     .bg-image {
       position: absolute;
@@ -61,8 +71,9 @@
       width: calc(100vw - 16px);
       height: 100%;
       object-fit: cover;
-      filter: blur(1px) brightness(0.6);
+      filter: blur(0px) brightness(0.5);
       z-index: -1;
+      opacity: 0.6;
     }
 
     .section {
@@ -102,21 +113,21 @@
       font-family: 'Parisienne', cursive;
       font-size: 65px;
       color: hsl(41, 100%, 75%);
-      margin-top: -33px;
+      margin-top: -20px;
       margin-left: -15px;
     }
 
     .date {
       font-size: 40px;
       font-weight: 500;
-      letter-spacing: 3px;
+      /* letter-spacing: 3px; */
     }
 
     .location {
       font-size: 22px;
       font-weight: 400;
       margin-top: -2px;
-      letter-spacing: 1.8px;
+      /* letter-spacing: 1.8px; */
     }
   }
 }

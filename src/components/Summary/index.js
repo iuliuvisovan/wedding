@@ -17,7 +17,7 @@ export default function Summary() {
           <div className="value">39</div>
           <div className="label">m</div>
         </div>
-        <div className="square">
+        <div className="square" style={{ boxShadow: 'none' }}>
           <div className="value">46</div>
           <div className="label">s</div>
         </div>
@@ -38,7 +38,7 @@ export default function Summary() {
           className="bg-image"
           src="https://elitiscenter.ro/wp-content/uploads/2024/03/Elitis-Sali-De-Nunta-5.png"
           alt="Elitis Events Center"
-        ></img>
+        />
       </div>
     </div>
   );

@@ -1,12 +1,10 @@
 .countdown-timer {
   display: flex;
   justify-content: center;
-  margin-bottom: 80px;
   margin-top: 32px;
   padding: 24px 0;
   position: relative;
   overflow: hidden;
-  /* border: 1px solid blue; */
 }
 
 .square {
@@ -17,7 +15,6 @@
   width: 75px;
   height: 100px;
   position: relative;
-  /* border: 1px solid blue; */
   overflow: hidden;
 
   .top-gradient {

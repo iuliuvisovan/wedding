@@ -9,6 +9,7 @@ import MeetTheGodparents from './components/MeetTheGodparents';
 import AndTheParents from './components/AndTheParents';
 import CountdownTimer from './components/CountdownTimer';
 import Summary from './components/Summary';
+import LetsParty from './components/LetsParty';
 
 export const WITH_ANIMATIONS = false;
 
@@ -25,6 +26,7 @@ export default function App() {
         <AndTheParents />
         <CountdownTimer />
         <Summary />
+        <LetsParty />
       </CollapsedScreens>
     </div>
   );

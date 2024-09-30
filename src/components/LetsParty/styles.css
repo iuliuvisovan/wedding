@@ -1,0 +1,26 @@
+.lets-party {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+  padding: 16px;
+
+  span {
+    font-size: 48px;
+    line-height: 44px;
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Parisienne', cursive;
+    font-weight: 400;
+    color: #c3c3c3;
+
+    .colored {
+      background: linear-gradient(0, #ffd780, hsl(41, 100%, 60%), hsl(41, 100%, 75%));
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 80px;
+    }
+  }
+}

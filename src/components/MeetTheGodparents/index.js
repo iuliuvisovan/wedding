@@ -25,6 +25,7 @@ export default function MeetTheGodparents() {
             <span className="first-name">Tony</span>
           </div>
         </div>
+        <div className="bottom-gradient"></div>
       </div>
     </div>
   );

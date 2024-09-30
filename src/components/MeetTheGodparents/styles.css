@@ -24,7 +24,7 @@
 
   .img-wrapper {
     position: relative;
-    margin-top: 8px;
+    margin-top: 0px;
     z-index: -1;
 
     .top-gradient {
@@ -34,6 +34,16 @@
       width: 100vw;
       height: 100px;
       background: linear-gradient(0, #fff0, #fff);
+      z-index: 1;
+    }
+
+    .bottom-gradient {
+      position: absolute;
+      bottom: 8px;
+      left: -24px;
+      width: 100vw;
+      height: 100px;
+      background: linear-gradient(0, #000a, #0000);
       z-index: 1;
     }
 
@@ -52,11 +62,10 @@
 
       position: absolute;
       left: 50%;
-      bottom: 24px;
+      bottom: 8px;
       transform: translate(-50%, 0);
       z-index: 2;
       text-align: center;
-      padding-left: 34px;
 
       &.on-top {
         /* background: red; */

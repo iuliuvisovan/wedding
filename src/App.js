@@ -8,7 +8,7 @@ import Schedule from './components/Schedule';
 import MeetTheGodparents from './components/MeetTheGodparents';
 import AndTheParents from './components/AndTheParents';
 
-export const WITH_ANIMATIONS = true;
+export const WITH_ANIMATIONS = false;
 
 export default function App() {
   return (

@@ -3,30 +3,98 @@
   justify-content: center;
   margin-bottom: 80px;
   margin-top: 32px;
+  padding: 24px 0;
+  position: relative;
+  overflow: hidden;
+  /* border: 1px solid blue; */
+}
+
+.square {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4px;
+  width: 75px;
+  height: 100px;
+  position: relative;
+  /* border: 1px solid blue; */
   overflow: hidden;
 
-  background: linear-gradient(0, #0002, #000, #0002);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  .square {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 4px;
-    width: 100px;
-    width: 75px;
-    height: 50px;
-
-    .value {
-      font-weight: 700;
-      font-size: 40px;
-    }
-
-    .label {
-      margin-left: 3px;
-      margin-right: -3px;
-    }
+  .top-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 24px;
+    background: linear-gradient(0, #fff0, #fff);
+    z-index: 1;
   }
+
+  .bottom-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    height: 55px;
+    background: linear-gradient(0, #fff, #fff, #fff, #fff0);
+  }
+}
+
+.flip-container {
+  position: relative;
+  height: 60px;
+  width: 100%;
+}
+
+.value {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+/* Default positions */
+.prev {
+  transform: translateY(0%);
+}
+
+.next {
+  transform: translateY(100%);
+}
+
+/* Animations */
+.prev {
+  animation: slideUpPrev 0.5s forwards;
+}
+
+.next {
+  animation: slideUpNext 0.5s forwards;
+}
+
+@keyframes slideUpPrev {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slideUpNext {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.label {
+  margin-top: 8px;
+  font-size: 16px;
+  position: relative;
+  z-index: 5;
 }

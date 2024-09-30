@@ -86,15 +86,23 @@
       &.button-section {
         justify-content: flex-end;
 
-        .add-to-calendar-button {
+        .add-to-calendar::part(atcb-button) {
+          border: none;
+          color: #fff;
+          background: transparent;
+          font-family: 'Montserrat', sans-serif;
           cursor: pointer;
           border-bottom: 1px solid #fffa;
           /* padding: 0 4px; */
           font-size: 18px;
+          font-weight: 500;
+          padding: 0;
+        }
+      }
 
-          &:hover {
-            border-bottom-color: #fff;
-          }
+      &.button-section:hover {
+        .add-to-calendar::part(atcb-button) {
+          border-bottom: 1px solid #fff;
         }
       }
     }

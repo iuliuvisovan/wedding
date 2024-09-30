@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles.css';
+import 'add-to-calendar-button/unstyle';
 
 export default function Summary() {
   return (
@@ -14,7 +15,20 @@ export default function Summary() {
           <div className="location">Cluj-Napoca, Romania</div>
         </div>
         <div className="section button-section">
-          <div className="add-to-calendar-button">Add to Calendar</div>
+          <add-to-calendar-button
+            name="💍 Nuntă Iuliu & Gabriela"
+            description="💛 17 Mai, 2025 💛"
+            startDate="2025-05-17"
+            location="Elitis Events Center | str. Făgetului 74, Cluj-Napoca, Romania"
+            options="['Google']"
+            timeZone="Europe/Bucharest"
+            trigger="click"
+            inline
+            hideIconButton
+            hideCheckmark
+            buttonStyle="none"
+            iCalFileName="Iuliu-Gabriela-Wedding"
+          />
         </div>
         <img
           className="bg-image"

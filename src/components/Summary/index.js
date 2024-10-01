@@ -6,6 +6,7 @@ export default function Summary() {
   return (
     <div className="summary">
       <div className="card">
+        <video src="images/glitter.mp4" autoPlay loop muted="muted" playsInline="playsinline"></video>
         <div className="section" style={{ transform: 'translateY(-4px)' }}>
           <div className="title">Iuliu & Gabriela's</div>
           <div className="wedding">Wedding</div>

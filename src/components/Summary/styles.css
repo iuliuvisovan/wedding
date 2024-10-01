@@ -63,16 +63,31 @@
     /* background: radial-gradient(ellipse farthest-corner at right bottom, #fedb37 0%, #fdb931 8%, #9f7928 30%, #8a6e2f 40%, transparent 80%),
       radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #ffffac 8%, #d1b464 25%, #5d4a1f 62.5%, #5d4a1f 100%); */
 
-    .bg-image {
+    video {
       position: absolute;
       left: 0;
       top: 0;
-      width: calc(100vw - 16px);
-      height: 100%;
-      object-fit: cover;
-      filter: blur(0px) brightness(0.7);
+      width: calc((100vw - 16px));
+      border-radius: 40px;
+
       z-index: -1;
-      opacity: 0.7;
+      overflow: hidden;
+      /* clip-path: polygon(100% 0, 86% 86%, 44% 64%, 0 40%, 0 0); */
+
+      /* filter: brightness(1.5); */
+      mix-blend-mode: screen;
+    }
+
+    .bg-image {
+      position: absolute;
+      left: -2%;
+      top: -5%;
+      width: calc(100vw);
+      height: 106%;
+      object-fit: cover;
+      filter: blur(0px) brightness(0.55);
+      z-index: -2;
+      opacity: 1;
     }
 
     .section {
@@ -132,8 +147,7 @@
     .date {
       font-weight: 600;
       font-size: 42px;
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 0.1), 0 0 30px rgba(255, 255, 255, 0.1),
-        0 0 40px rgba(255, 255, 255, 0.1);
+
       /* font-weight: 600; */
       /* font-family: 'Raleway'; */
 
@@ -143,8 +157,6 @@
     .location {
       font-size: 25px;
       font-weight: 350;
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.15), 0 0 20px rgba(255, 255, 255, 0.15), 0 0 30px rgba(255, 255, 255, 0.15),
-      0 0 40px rgba(255, 255, 255, 0.15);
       /* margin-top: -2px; */
       /* font-family: 'Old Standard TT'; */
 

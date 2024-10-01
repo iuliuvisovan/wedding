@@ -5,6 +5,7 @@
   padding: 24px 0;
   position: relative;
   overflow: hidden;
+  /* font-family: 'Josefin Sans'; */
 }
 
 .square {
@@ -45,12 +46,18 @@
 }
 
 .value {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 40px;
   line-height: 60px;
   position: absolute;
   width: 100%;
   text-align: center;
+  font-family: 'Nunito', sans-serif;
+
+  background: linear-gradient(0, hsl(41, 100%, 45%), hsl(41, 100%, 62%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Default positions */
@@ -90,8 +97,9 @@
 }
 
 .label {
-  margin-top: 8px;
-  font-size: 16px;
+  margin-top: -2px;
+  font-size: 26px;
   position: relative;
   z-index: 5;
+  font-family: 'Parisienne';
 }

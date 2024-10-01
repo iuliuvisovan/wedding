@@ -25,6 +25,7 @@ export default function App() {
         <MeetTheGodparents />
         <AndTheParents />
         <CountdownTimer />
+        <span className='left-until'>left until...</span>
         <Summary />
         <LetsParty />
       </CollapsedScreens>

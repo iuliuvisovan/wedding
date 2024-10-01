@@ -96,6 +96,7 @@
           font-size: 18px;
           font-weight: 500;
           padding: 0;
+          transform: translateY(2px);
         }
       }
 
@@ -118,13 +119,16 @@
     .wedding {
       font-family: 'Parisienne', cursive;
       font-size: 54px;
-      color: hsl(40, 100%, 70%);
+      background: linear-gradient(0, hsl(41, 100%, 45%), hsl(41, 100%, 70%));
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
       margin-top: -20px;
       margin-left: -15px;
     }
 
     .date {
-      font-family: 'Josefin Sans';
       font-weight: 600;
       font-size: 40px;
       /* font-weight: 600; */
@@ -134,7 +138,7 @@
     }
 
     .location {
-      font-size: 21px;
+      font-size: 22px;
       font-weight: 400;
       margin-top: -4px;
       /* font-family: 'Old Standard TT'; */

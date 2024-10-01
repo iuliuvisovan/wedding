@@ -71,10 +71,10 @@ export default function CountdownTimer() {
 
   return (
     <div className="countdown-timer">
-      <AnimatedUnit value={timeLeft.days || 0} label="D" />
-      <AnimatedUnit value={timeLeft.hours || 0} label="H" />
-      <AnimatedUnit value={timeLeft.minutes || 0} label="m" />
-      <AnimatedUnit value={timeLeft.seconds || 0} label="s" />
+      <AnimatedUnit value={timeLeft.days || 0} label="days" />
+      <AnimatedUnit value={timeLeft.hours || 0} label="hours" />
+      <AnimatedUnit value={timeLeft.minutes || 0} label="minutes" />
+      <AnimatedUnit value={timeLeft.seconds || 0} label="seconds" />
     </div>
   );
 }

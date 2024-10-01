@@ -6,6 +6,7 @@ export default function MeetTheGodparents() {
     <div className="and-the-parents">
       <div className="and-our-beloved">and our beloved</div>
       <div className="parents">Parents</div>
+      <img src="images/laurel.png" className="small" alt="Laurels" />
       <div className="names">
         <div className="first-names">
           <span className="first-name">Marius</span>
@@ -16,8 +17,10 @@ export default function MeetTheGodparents() {
           <div className="family-name">Visovan</div>
           <div className="comma">,</div>
         </div>
+        <img src="images/laurel.png" alt="Laurels" />
       </div>
-      <div className="names" style={{ marginTop: 24 }}>
+
+      <div className="names" style={{ marginTop: -16 }}>
         <div className="first-names">
           <span className="first-name">Elena</span>
           <span className="and-symbol">&</span>
@@ -27,6 +30,13 @@ export default function MeetTheGodparents() {
           <div className="family-name">Lucan</div>
         </div>
       </div>
+
+      <img
+        src="images/laurel.png"
+        className="small"
+        alt="Laurels"
+        style={{ transform: 'scaleX(-1) translateX(100px) rotate(-35deg)', marginTop: -50, marginBottom: 50 }}
+      />
     </div>
   );
 }

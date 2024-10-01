@@ -6,11 +6,11 @@ export default function Summary() {
   return (
     <div className="summary">
       <div className="card">
-        <div className="section">
+        <div className="section" style={{ transform: 'translateY(-4px)' }}>
           <div className="title">Iuliu & Gabriela's</div>
           <div className="wedding">Wedding</div>
         </div>
-        <div className="section">
+        <div className="section" style={{ marginTop: 16 }}>
           <div className="date">17 May, 2025</div>
           <div className="location">Cluj-Napoca, Romania</div>
         </div>

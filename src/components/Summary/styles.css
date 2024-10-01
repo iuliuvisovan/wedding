@@ -109,7 +109,7 @@
     .title {
       font-family: 'Parisienne', cursive;
       font-weight: 400;
-      font-size: 36px;
+      font-size: 40px;
       text-align: center;
       position: relative;
       z-index: 2;
@@ -117,22 +117,24 @@
 
     .wedding {
       font-family: 'Parisienne', cursive;
-      font-size: 50px;
+      font-size: 54px;
       color: hsl(40, 100%, 70%);
       margin-top: -20px;
       margin-left: -15px;
     }
 
     .date {
+      font-family: 'Josefin Sans';
+      font-weight: 600;
       font-size: 40px;
       /* font-weight: 600; */
-      font-family: 'Raleway';
+      /* font-family: 'Raleway'; */
 
       /* letter-spacing: 3px; */
     }
 
     .location {
-      font-size: 20px;
+      font-size: 21px;
       font-weight: 400;
       margin-top: -4px;
       /* font-family: 'Old Standard TT'; */

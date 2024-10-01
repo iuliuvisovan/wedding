@@ -93,10 +93,7 @@
       }
 
       .and-symbol {
-        /* background: linear-gradient(0, hsl(41, 100%, 75%), hsl(41, 100%, 45%), hsl(41, 100%, 75%)); */
-        /* background: linear-gradient(0, hsl(73, 100%, 30%), hsl(73, 100%, 40%), hsl(73, 100%, 30%)); */
-        background: linear-gradient(0, hsl(73, 100%, 42%), hsl(73, 100%, 35%));
-
+        background: linear-gradient(0, hsl(73, 100%, 42%), hsl(73, 100%, 30%));
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;

@@ -40,8 +40,6 @@ export default function SaveTheDate() {
       return;
     }
 
-    console.log('window.scrollY', window.scrollY);
-
     const newIsFlipped = window.scrollY > PAST_CARD_OFFSET && window.scrollY < REVERT_FLIP_OFFSET;
     if (newIsFlipped) {
       await wait(3000);

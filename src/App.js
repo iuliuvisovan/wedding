@@ -25,9 +25,10 @@ export default function App() {
         <MeetTheGodparents />
         <AndTheParents />
         <CountdownTimer />
-        <span className='left-until'>left until...</span>
+        <span className="left-until">left until...</span>
         <Summary />
         <LetsParty />
+        <span style={{ marginTop: 40, display: 'inline-block', fontSize: 12 }}>Developed with 💛 by the groom. <br/>Creative direction by the bride.</span>
       </CollapsedScreens>
     </div>
   );

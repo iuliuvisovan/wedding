@@ -49,9 +49,13 @@ export default function LandingPage() {
       <div className="title-and-subtitle">
         <div className="title">
           <div className="and-symbol">&</div>
-          <div className="name-word on-top iuliu">Iuliu</div>
+          <div className="name-word on-top iuliu" onClick={() => window.open('https://www.instagram.com/iuliu_', '_blank')}>
+            Iuliu
+          </div>
           <div className="name-word iuliu">Iuliu</div>
-          <div className="name-word on-top gabriela">Gabriela</div>
+          <div className="name-word on-top gabriela" onClick={() => window.open('https://www.instagram.com/lucan.gabriela', '_blank')}>
+            Gabriela
+          </div>
           <div className="name-word gabriela">Gabriela</div>
         </div>
       </div>

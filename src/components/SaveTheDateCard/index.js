@@ -31,7 +31,7 @@ export default function SaveTheDate() {
     clearInterval(playInterval);
     playInterval = setInterval(() => {
       videoRef.current.play();
-    }, 5000);
+    }, 7000);
   }, []);
 
   // add scroll listener, when it's more than 250px, set state isFlipped to true

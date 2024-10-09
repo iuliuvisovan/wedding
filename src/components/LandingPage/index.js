@@ -21,8 +21,8 @@ export default function LandingPage() {
 
       intervalRef = setInterval(() => {
         highlightRandomImage();
-      }, 2000);
-    }, 3000);
+      }, 1200);
+    }, 2000);
   }, []);
 
   const highlightRandomImage = async () => {

@@ -1,17 +1,15 @@
 .event-location {
   height: 350px;
   z-index: 19;
-  margin-left: 8px;
   display: flex;
   justify-content: center;
 
   .map-container {
     position: relative;
     overflow: hidden;
-    max-width: 768px;
+    width: min(768px, calc(100vw - 16px));
     border-radius: 16px;
-    box-shadow: 0px 0px 12px #0003;
-    flex: 1;
+    box-shadow: 0px 0px 8px #0003;
 
     .gm-style iframe + div {
       border: none !important;

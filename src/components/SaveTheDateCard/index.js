@@ -107,12 +107,11 @@ export default function SaveTheDate() {
         </div>
       </div>
       {showsConfetti && <h1 className="married">MARRIED</h1>}
-
-      {/* {WITH_ANIMATIONS && showsConfetti && (
+      {WITH_ANIMATIONS && showsConfetti && (
         <div className="animation-wrapper">
           <DotLottieReact width="100vw" src="images/fireworks.lottie" loop className="fireworks" autoplay speed={1} />
         </div>
-      )} */}
+      )}
     </div>
   );
 }

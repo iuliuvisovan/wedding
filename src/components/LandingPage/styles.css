@@ -38,7 +38,7 @@
     img {
       width: min(150px, calc(100vw / 4 - 3px));
       filter: brightness(0.45);
-      /* transition: filter 1s ease-in; */
+      transition: filter 1s ease-in;
       position: relative;
 
       &.highlighted {

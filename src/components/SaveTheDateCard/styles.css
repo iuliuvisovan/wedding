@@ -10,7 +10,7 @@
   z-index: 300;
 
   @media (min-width: 768px) {
-    zoom: 1.25;
+    zoom: 1.5;
   }
 
   &:active {
@@ -87,6 +87,15 @@
 
         video {
           width: calc((100vw - 16px * 2) / 2.4);
+        }
+
+        @media (min-width: 768px) {
+          width: calc((400px - 16px * 2) / 4.13);
+          top: 76%;
+
+          video {
+            width: calc((400px - 16px * 2) / 2.4);
+          }
         }
       }
 

@@ -4,7 +4,7 @@
   position: relative;
 
   @media (min-width: 768px) {
-    height: 118vh;
+    height: 119vh;
   }
 
   .plane-wrapper {

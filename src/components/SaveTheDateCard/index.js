@@ -119,7 +119,7 @@ export default function SaveTheDate() {
       </div>
       <div className={'face were-getting-married ' + (isFlipped ? 'flipped' : '')}>
         <div className="were-getting-married-screen">
-          <h2>we're getting</h2>
+          <span>we're getting</span>
         </div>
       </div>
       {showsMarried && <h1 className="married">MARRIED</h1>}

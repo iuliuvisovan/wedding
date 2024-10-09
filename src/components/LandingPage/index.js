@@ -3,11 +3,6 @@ import './styles.css';
 import React from 'react';
 import { WITH_ANIMATIONS } from '../../App';
 
-// map of transforms, which then applied to images:
-const transforms = {
-  1: 'scale(1.1)',
-};
-
 let intervalRef;
 
 const NUMBER_OF_IMAGES = 30;
@@ -62,12 +57,14 @@ export default function LandingPage() {
         </div>
         <div className="images-wrapper">
           {new Array(NUMBER_OF_IMAGES).fill(null).map((_, index) => (
-            <img
-              key={index}
-              src={`images/landing/image${index + 1}.jpeg`}
-              alt="Iuliu & Gabriela Travelling"
-              className={selectedImageIndex === index ? 'highlighted' : ''}
-            />
+            <div className="img-wrapper">
+              <img
+                key={index}
+                src={`images/landing/image${index + 1}.jpeg`}
+                alt="Iuliu & Gabriela Travelling"
+                className={selectedImageIndex === index ? 'highlighted' : ''}
+              />
+            </div>
           ))}
         </div>
         <div className="bottom-gradient"></div>

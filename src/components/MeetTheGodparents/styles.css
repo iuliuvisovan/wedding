@@ -1,9 +1,9 @@
 .meet-the-godparents {
   margin-top: 70px;
-  text-align: left;
   font-family: 'Parisienne', cursive;
   display: flex;
   justify-content: center;
+  align-items: center;
 
   .content-wrapper {
     width: min(768px, 100vw);
@@ -13,7 +13,6 @@
     font-size: 40px;
     margin-bottom: -16px;
     padding-left: 32px;
-    text-align: left;
     color: #c3cfc3;
   }
 

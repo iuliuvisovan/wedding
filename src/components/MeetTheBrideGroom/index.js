@@ -9,9 +9,11 @@ export default function MeetTheBridegroom() {
   useEffect(() => {
     console.log('setting interval');
 
-    randomInterval.current = window.setInterval(() => {
-      setActiveSlide(+new Date() % 5);
-    }, 2000);
+    if (window.innerWidth <= 768) {
+      randomInterval.current = window.setInterval(() => {
+        setActiveSlide(+new Date() % 5);
+      }, 2000);
+    }
 
     return () => {
       window.clearInterval(randomInterval.current);
@@ -26,27 +28,47 @@ export default function MeetTheBridegroom() {
         <div
           className="img-wrapper"
           onTouchStart={() => {
-            window.clearInterval(randomInterval.current);
+            if (window.innerWidth <= 768) {
+              window.clearInterval(randomInterval.current);
+            }
           }}
         >
           <div className="top-gradient"></div>
           <Carousel
             swipeTreshold={60}
+            containerProps={{
+              style: {
+                width: '100%',
+                justifyContent: 'space-between',
+                userSelect: 'none',
+                overflow: 'hidden',
+              },
+            }}
             activeSlideIndex={activeSlide}
             onRequestChange={(slide) => {
               setActiveSlide(slide);
               console.log('changed');
             }}
-            itemsToShow={2}
+            itemsToShow={4}
             speed={300}
-            infinite
+            centerMode
             backwardBtnProps={{ style: { display: 'none' } }}
             forwardBtnProps={{ style: { display: 'none' } }}
             easing="ease-in-out"
+            activeSlideProps={{
+              style: {
+                opacity: 1,
+              },
+            }}
             updateOnItemClick={window.innerWidth > 768}
           >
             {Array.from({ length: 6 }).map((item, index) => (
-              <img loading="lazy" key={index} src={`images/carousel/image${index + 1}.jpeg`} alt="The bridegroom" />
+              <img
+                loading="lazy"
+                key={index}
+                src={`images/carousel/${window.innerWidth > 768 ? 'desktop' : 'mobile'}/image${index + 1}.jpeg`}
+                alt="The bridegroom"
+              />
             ))}
           </Carousel>
         </div>

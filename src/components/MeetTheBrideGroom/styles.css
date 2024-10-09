@@ -6,7 +6,11 @@
   justify-content: center;
 
   .content-wrapper {
-    width: min(768px, 100vw);
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
   }
 
   .meet {
@@ -18,10 +22,7 @@
   }
 
   .the-bridegroom {
-    /* background: linear-gradient(0, hsl(41, 100%, 75%), hsl(41, 100%, 45%), hsl(41, 100%, 75%)); */
-    background: linear-gradient(0, hsl(32, 100%, 75%), hsl(20, 100%, 60%), hsl(32, 100%, 75%));
-    /* background: linear-gradient(0, hsl(24, 100%, 40%), hsl(24, 100%, 60%)); */
-
+    background: linear-gradient(0, hsl(30, 100%, 75%), hsl(22, 100%, 60%), hsl(30, 100%, 75%));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -29,11 +30,17 @@
     margin: 0;
     padding-left: 16px;
     white-space: nowrap;
+
+    @media (min-width: 768px) {
+      font-size: 72px;
+    }
   }
 
   .img-wrapper {
     position: relative;
     font-size: 0;
+    width: 100vw;
+    margin-top: 24px;
 
     .top-gradient {
       position: absolute;
@@ -43,6 +50,10 @@
       height: 100px;
       background: linear-gradient(0, #fff0, #fff);
       z-index: 1;
+
+      @media (min-width: 768px) {
+        display: none;
+      }
     }
 
     .bottom-gradient {
@@ -56,8 +67,12 @@
     }
 
     img {
-      /* height: 320px; */
-      width: 100vw;
+      width: min(768px, 100vw);
+      max-height: 80vh;
+      object-fit: contain;
+      -webkit-user-drag: none;
+      opacity: 0.6;
+      transition: all 0.3s ease-in-out;
     }
 
     .names {

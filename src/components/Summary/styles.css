@@ -2,6 +2,8 @@
   padding: 8px;
   text-align: left;
   font-family: 'Josefin Sans', sans-serif;
+  display: flex;
+  justify-content: center;
 
   .countdown-timer {
     display: flex;
@@ -42,11 +44,11 @@
   }
 
   .card {
+    width: min(600px, calc(100vw - 16px));
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 1;
     height: 320px;
     border-radius: 24px;
     overflow: hidden;
@@ -67,9 +69,8 @@
       position: absolute;
       left: 0;
       top: 0;
-      width: calc((100vw - 16px));
+      width: 100%;
       border-radius: 40px;
-
       z-index: -1;
       overflow: hidden;
       /* clip-path: polygon(100% 0, 86% 86%, 44% 64%, 0 40%, 0 0); */
@@ -82,7 +83,7 @@
       position: absolute;
       left: -2%;
       top: -5%;
-      width: calc(100vw);
+      width: 102%;
       height: 106%;
       object-fit: cover;
       filter: blur(0px) brightness(0.55);

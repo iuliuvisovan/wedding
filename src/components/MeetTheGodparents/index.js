@@ -9,7 +9,8 @@ export default function MeetTheGodparents() {
         <div className="the-godparents">The Godparents</div>
         <div className="img-wrapper">
           <div className="top-gradient"></div>
-          <img src="images/the-godparents.jpg" />
+          <img src="images/the-godparents.jpg" alt="The godparents" className="only-mobile" />
+          <img src="images/the-godparents-desktop.jpg" alt="The godparents" className="only-desktop" />
           <div className="names">
             <div className="family-name">Branic</div>
             <div className="first-names">

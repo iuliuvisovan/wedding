@@ -23,6 +23,7 @@ code {
     opacity: 0;
     height: 200px;
     overflow: hidden;
+    border: 1px solid red;
   }
 }
 

@@ -6,10 +6,11 @@ import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 let playInterval;
 let confettiInterval;
+let showCardTimeout;
 let shouldPauseScrollListening = false;
 
-const REVERT_FLIP_OFFSET = 580;
-const PAST_CARD_OFFSET = 280;
+const AUTO_FLIP_POINT = window.innerHeight / 1.8;
+const FLIP_UNDO_POINT = AUTO_FLIP_POINT + 270;
 const CONFETTI_TIMEOUT = 1000;
 
 export default function SaveTheDate() {
@@ -41,22 +42,31 @@ export default function SaveTheDate() {
       return;
     }
 
-    const newIsFlipped = window.scrollY > PAST_CARD_OFFSET && window.scrollY < REVERT_FLIP_OFFSET;
-    if (newIsFlipped) {
-      await wait(3000);
-      if (shouldPauseScrollListening) {
+    maybeShowCard();
+    maybeHideCard();
+  };
+
+  const maybeHideCard = () => {
+    if (window.scrollY > FLIP_UNDO_POINT) {
+      setIsPastRevertOffset(true);
+      setIsFlipped(false);
+      shouldPauseScrollListening = true;
+      window.removeEventListener('scroll', handleScroll);
+    }
+  };
+
+  const maybeShowCard = () => {
+    if (window.scrollY > AUTO_FLIP_POINT && !isFlipped) {
+      if (showCardTimeout) {
         return;
       }
 
-      setIsFlipped(true);
-      setShouldHideBecause(true);
-    } else {
-      setIsFlipped(false);
-    }
-    if (window.scrollY > REVERT_FLIP_OFFSET) {
-      setIsPastRevertOffset(true);
       shouldPauseScrollListening = true;
-      window.removeEventListener('scroll', handleScroll);
+      showCardTimeout = setTimeout(() => {
+        setIsFlipped(true);
+        setShouldHideBecause(true);
+        shouldPauseScrollListening = false;
+      }, 2500);
     }
   };
 
@@ -78,7 +88,7 @@ export default function SaveTheDate() {
         setTimeout(() => {
           window.showCollapsedScreens();
           window.areCollapsedScreenShown = true;
-        }, 2500);
+        }, 2000);
       }
     } else {
       setShowsConfetti(false);

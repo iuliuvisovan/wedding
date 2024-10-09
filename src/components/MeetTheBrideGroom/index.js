@@ -7,13 +7,14 @@ export default function MeetTheBridegroom() {
   const randomInterval = useRef(null);
 
   useEffect(() => {
-    console.log('setting interval');
-
-    if (window.innerWidth <= 768) {
-      randomInterval.current = window.setInterval(() => {
-        setActiveSlide(+new Date() % 5);
-      }, 2000);
-    }
+    randomInterval.current = window.setInterval(() => {
+      setActiveSlide((oldIndex) => {
+        if (oldIndex >= 6) {
+          return 0;
+        }
+        return oldIndex + 1;
+      });
+    }, 3000);
 
     return () => {
       window.clearInterval(randomInterval.current);
@@ -28,9 +29,10 @@ export default function MeetTheBridegroom() {
         <div
           className="img-wrapper"
           onTouchStart={() => {
-            if (window.innerWidth <= 768) {
-              window.clearInterval(randomInterval.current);
-            }
+            window.clearInterval(randomInterval.current);
+          }}
+          onMouseDown={() => {
+            window.clearInterval(randomInterval.current);
           }}
         >
           <div className="top-gradient"></div>

@@ -78,7 +78,7 @@ export default function SaveTheDate() {
         setShowsMarried(true);
         setTimeout(() => {
           setShowsConfetti(false);
-        }, 2800);
+        }, 3500);
         shouldPauseScrollListening = false;
       }, CONFETTI_TIMEOUT);
 
@@ -88,7 +88,7 @@ export default function SaveTheDate() {
         setTimeout(() => {
           window.showCollapsedScreens();
           window.areCollapsedScreenShown = true;
-        }, 2000);
+        }, 4500);
       }
     } else {
       setShowsConfetti(false);

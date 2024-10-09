@@ -56,7 +56,7 @@ export default function LandingPage() {
           </div>
         </div>
         <div className="images-wrapper">
-          {new Array(NUMBER_OF_IMAGES + (window.innerWidth < 768 ? 0 : window.innerWidth > 1400 ? 50 : 15)).fill(null).map((_, index) => (
+          {new Array(NUMBER_OF_IMAGES + (window.innerWidth < 768 ? 0 : 15)).fill(null).map((_, index) => (
             <img
               key={index}
               src={`images/landing/image${(index % NUMBER_OF_IMAGES) + 1}.jpeg`}

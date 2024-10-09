@@ -8,7 +8,6 @@
   align-items: center;
 
   z-index: 300;
-
   @media (min-width: 768px) {
     zoom: 1.5;
   }
@@ -20,7 +19,7 @@
   }
 
   .face {
-    width: 362px;
+    width: min(362px, calc(100vw - 32px));
     box-shadow: 0px 0px 8px #0003;
     border-radius: 16px;
     z-index: 101;
@@ -136,7 +135,7 @@
     -webkit-text-fill-color: transparent; */
     margin: 0;
     letter-spacing: -1px;
-    font-size: 67px;
+    font-size: 64px;
     margin-top: 8px;
     position: absolute;
     left: 0;

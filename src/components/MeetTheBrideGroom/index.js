@@ -21,10 +21,9 @@ export default function MeetTheBridegroom() {
             centerMode
             backwardBtnProps={{ style: { display: 'none' } }}
             forwardBtnProps={{ style: { display: 'none' } }}
-            
           >
             {Array.from({ length: 6 }).map((item, index) => (
-              <img key={index} src={`images/carousel/${index + 1}.jpg`} alt="The bridegroom" />
+              <img key={index} src={`images/carousel/image${index + 1}.jpeg`} alt="The bridegroom" />
             ))}
           </Carousel>
         </div>

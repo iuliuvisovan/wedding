@@ -30,9 +30,9 @@ export default function App() {
         <span className="left-until">left until...</span>
         <Summary />
         <LetsParty />
-        <span style={{ display: 'inline-block', fontSize: 12 }}>
-          Developed with 💛 by the groom. <br />
-          Creative inspiration by the bride.
+        <span style={{ display: 'inline-block', fontSize: 12, lineHeight: '20px' }}>
+          Developed with 💛 by the groom <br />
+          Creative inspiration by the bride
         </span>
       </CollapsedScreens>
     </div>

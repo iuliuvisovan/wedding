@@ -34,6 +34,7 @@
     backface-visibility: hidden;
     padding-top: 14px;
     padding-bottom: 12px;
+    cursor: pointer;
 
     &.were-getting-married {
       position: absolute;
@@ -138,16 +139,12 @@
 
   .animation-wrapper {
     position: absolute;
-    top: -50vw;
-    left: 0;
     overflow: hidden;
-    width: 100vw;
     z-index: 150;
-    height: 600px;
+    width: 140vw;
 
-    .fireworks {
-      width: 140vw;
-      margin-left: -20vw;
+    @media (min-width: 768px) {
+      width: 516px;
     }
   }
 

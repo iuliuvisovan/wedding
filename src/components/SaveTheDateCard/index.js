@@ -16,6 +16,7 @@ export default function SaveTheDate() {
   const videoRef = useRef();
   const [isFlipped, setIsFlipped] = useState(false);
   const [showsConfetti, setShowsConfetti] = useState(false);
+  const [showsMarried, setShowsMarried] = useState(false);
   const [isPastRevertOffset, setIsPastRevertOffset] = useState(false);
   const [shouldHideBecause, setShouldHideBecause] = useState(false);
 
@@ -64,6 +65,10 @@ export default function SaveTheDate() {
       shouldPauseScrollListening = true;
       confettiInterval = setTimeout(() => {
         setShowsConfetti(true);
+        setShowsMarried(true);
+        setTimeout(() => {
+          setShowsConfetti(false);
+        }, 2800);
         shouldPauseScrollListening = false;
       }, CONFETTI_TIMEOUT);
 
@@ -77,6 +82,7 @@ export default function SaveTheDate() {
       }
     } else {
       setShowsConfetti(false);
+      setShowsMarried(false);
       clearTimeout(confettiInterval);
     }
   }, [isFlipped]);
@@ -106,10 +112,10 @@ export default function SaveTheDate() {
           <h2>we're getting</h2>
         </div>
       </div>
-      {showsConfetti && <h1 className="married">MARRIED</h1>}
+      {showsMarried && <h1 className="married">MARRIED</h1>}
       {WITH_ANIMATIONS && showsConfetti && (
         <div className="animation-wrapper">
-          <DotLottieReact width="100vw" src="images/fireworks.lottie" loop className="fireworks" autoplay speed={1} />
+          <DotLottieReact width="100%" src="images/fireworks.lottie" loop className="fireworks" autoplay speed={1} />
         </div>
       )}
     </div>

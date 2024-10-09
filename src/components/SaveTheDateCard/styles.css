@@ -10,7 +10,7 @@
   z-index: 300;
 
   @media (min-width: 768px) {
-    transform: scale(1.25) translateY(-10%);
+    zoom: 1.25;
   }
 
   &:active {

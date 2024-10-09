@@ -1,6 +1,6 @@
 .screen-landing-page {
   overflow: hidden;
-  height: calc(115vh - 56px);
+  height: calc(115vh - 40px);
   position: relative;
 
   .plane-wrapper {
@@ -8,8 +8,12 @@
     top: 76vh;
     left: -100px;
     z-index: 10;
-    animation: fly 15s linear 5s infinite;
+    animation: fly 15s linear 8s infinite;
     filter: drop-shadow(-2px 4px 2px rgba(0, 0, 0, 0.4));
+
+    @media (min-width: 768px) {
+      animation-duration: 35s;
+    }
 
     .plane {
       width: 35px;
@@ -30,29 +34,14 @@
     img {
       width: calc(100vw / 4 - 3px);
       max-width: 250px;
-      filter: brightness(0.45);
+      filter: brightness(0.35);
       transition: all 1s ease-in;
       position: relative;
 
       &.highlighted {
-        transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         filter: brightness(0.85);
       }
-    }
-  }
-
-  .backdrop {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    transform-origin: center;
-    z-index: 201;
-
-    &.black {
-      background: #000;
-      animation: fade-to-transparent 2s ease-in-out 0s forwards;
     }
   }
 
@@ -63,6 +52,7 @@
     margin-left: 9px;
     font-size: 110px;
     position: absolute;
+    pointer-events: none;
 
     background: linear-gradient(0, hsl(41, 100%, 75%), hsl(41, 100%, 45%), hsl(41, 100%, 75%));
     background-clip: text;
@@ -100,6 +90,13 @@
       z-index: 1;
       text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.35);
       opacity: 0;
+      cursor: pointer;
+
+      &:hover {
+        filter: brightness(2);
+        opacity: 0.5;
+        text-shadow: 2px 0px 12px rgba(255, 255, 255, 0.4);
+      }
 
       &.iuliu {
         animation: show 1s ease-in-out 2s forwards;
@@ -116,6 +113,7 @@
         right: 0;
         margin: auto;
         text-shadow: none !important;
+        pointer-events: none;
 
         &.iuliu {
           clip-path: polygon(56% 0, 67% 0, 56% 66%, 50% 73%);
@@ -220,5 +218,21 @@
   }
   100% {
     transform: rotateX(0deg);
+  }
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 200vh;
+  transform-origin: center;
+  z-index: 301;
+  pointer-events: none;
+
+  &.black {
+    background: #000;
+    animation: fade-to-transparent 1.5s ease-in-out 0s forwards;
   }
 }

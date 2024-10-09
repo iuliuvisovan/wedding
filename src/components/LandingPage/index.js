@@ -26,7 +26,7 @@ export default function LandingPage() {
 
       intervalRef = setInterval(() => {
         highlightRandomImage();
-      }, 600);
+      }, 2000);
     }, 3000);
   }, []);
 
@@ -41,36 +41,38 @@ export default function LandingPage() {
   };
 
   return (
-    <div className="screen-landing-page">
-      <div className="plane-wrapper">
-        <img src={`images/plane.png`} alt="Iuliu & Gabriela Travelling in a Small Cute Plane" className="plane" />
-      </div>
+    <>
       {WITH_ANIMATIONS && <div className="backdrop black"></div>}
-      <div className="title-and-subtitle">
-        <div className="title">
-          <div className="and-symbol">&</div>
-          <div className="name-word on-top iuliu" onClick={() => window.open('https://www.instagram.com/iuliu_', '_blank')}>
-            Iuliu
-          </div>
-          <div className="name-word iuliu">Iuliu</div>
-          <div className="name-word on-top gabriela" onClick={() => window.open('https://www.instagram.com/lucan.gabriela', '_blank')}>
-            Gabriela
-          </div>
-          <div className="name-word gabriela">Gabriela</div>
+      <div className="screen-landing-page">
+        <div className="plane-wrapper">
+          <img src={`images/plane.png`} alt="Iuliu & Gabriela Travelling in a Small Cute Plane" className="plane" />
         </div>
+        <div className="title-and-subtitle">
+          <div className="title">
+            <div className="and-symbol">&</div>
+            <div className="name-word on-top iuliu">Iuliu</div>
+            <div className="name-word iuliu" onClick={() => window.open('https://www.instagram.com/iuliu_', '_blank')}>
+              Iuliu
+            </div>
+            <div className="name-word on-top gabriela">Gabriela</div>
+            <div className="name-word gabriela" onClick={() => window.open('https://www.instagram.com/lucan.gabriela', '_blank')}>
+              Gabriela
+            </div>
+          </div>
+        </div>
+        <div className="images-wrapper">
+          {new Array(NUMBER_OF_IMAGES).fill(null).map((_, index) => (
+            <img
+              key={index}
+              src={`images/landing/image${index + 1}.jpeg`}
+              alt="Iuliu & Gabriela Travelling"
+              className={selectedImageIndex === index ? 'highlighted' : ''}
+            />
+          ))}
+        </div>
+        <div className="bottom-gradient"></div>
       </div>
-      <div className="images-wrapper">
-        {new Array(NUMBER_OF_IMAGES).fill(null).map((_, index) => (
-          <img
-            key={index}
-            src={`images/landing/image${index + 1}.jpeg`}
-            alt="Iuliu & Gabriela Travelling"
-            className={selectedImageIndex === index ? 'highlighted' : ''}
-          />
-        ))}
-      </div>
-      <div className="bottom-gradient"></div>
-    </div>
+    </>
   );
 }
 

@@ -1,11 +1,15 @@
 .countdown-timer {
   display: flex;
   justify-content: center;
-  margin-top: 200px;
+  margin-top: 50px;
   padding: 24px 0;
   position: relative;
   overflow: hidden;
   /* font-family: 'Josefin Sans'; */
+
+  @media (min-width: 768px) {
+    margin-top: 140px;
+  }
 }
 
 .square {

@@ -72,10 +72,9 @@
   .title-and-subtitle {
     position: absolute;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 52vh;
+    transform: translate(-50%, -100%);
     z-index: 11;
-    margin-top: -60px;
   }
 
   .title {

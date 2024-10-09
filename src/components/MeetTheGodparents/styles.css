@@ -30,6 +30,7 @@
   .img-wrapper {
     position: relative;
     z-index: -1;
+    font-size: 0;
 
     @media (min-width: 768px) {
       border-bottom-right-radius: 16px;

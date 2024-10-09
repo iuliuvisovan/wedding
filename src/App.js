@@ -3,15 +3,16 @@ import { useEffect, useState } from 'react';
 import NavHearts from './components/NavHearts';
 import LandingPage from './components/LandingPage';
 import SaveTheDateCard from './components/SaveTheDateCard';
+import MeetTheBrideGroom from './components/MeetTheBrideGroom';
+import MeetTheGodparents from './components/MeetTheGodparents';
 import EventLocation from './components/EventLocation';
 import Schedule from './components/Schedule';
-import MeetTheGodparents from './components/MeetTheGodparents';
 import AndTheParents from './components/AndTheParents';
 import CountdownTimer from './components/CountdownTimer';
 import Summary from './components/Summary';
 import LetsParty from './components/LetsParty';
 
-export const WITH_ANIMATIONS = true;
+export const WITH_ANIMATIONS = false;
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
       <CollapsedScreens>
         <Schedule />
         <EventLocation />
+        <MeetTheBrideGroom />
         <MeetTheGodparents />
         <AndTheParents />
         <CountdownTimer />

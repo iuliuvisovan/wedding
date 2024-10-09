@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './styles.css';
+import Carousel from 'react-simply-carousel';
 
-export default function MeetThebridegroom() {
+export default function MeetTheBridegroom() {
+  const [activeSlide, setActiveSlide] = useState(0);
+
   return (
     <div className="meet-the-bridegroom">
       <div className="content-wrapper">
@@ -9,16 +12,21 @@ export default function MeetThebridegroom() {
         <div className="the-bridegroom">Bride & Groom</div>
         <div className="img-wrapper">
           <div className="top-gradient"></div>
-          <img src="images/carousel/1.jpg" alt="The bridegroom" />
-          {/* <div className="names">
-            <div className="family-name">Visovan</div>
-            <div className="first-names">
-              <span className="first-name">Ioana</span>
-              <span className="and-symbol">&</span>
-              <span className="first-name">Tony</span>
-            </div>
-          </div> */}
-          {/* <div className="bottom-gradient"></div> */}
+          <Carousel
+            preventScrollOnSwipe
+            swipeTreshold={60}
+            activeSlideIndex={activeSlide}
+            onRequestChange={setActiveSlide}
+            itemsToShow={2}
+            speed={400}
+            centerMode
+            backwardBtnProps={{ style: { display: 'none' } }}
+            forwardBtnProps={{ style: { display: 'none' } }}
+          >
+            {Array.from({ length: 10 }).map((item, index) => (
+              <img key={index} src={`images/carousel/${(index % 3) + 1}.jpg`} alt="The bridegroom" />
+            ))}
+          </Carousel>
         </div>
       </div>
     </div>

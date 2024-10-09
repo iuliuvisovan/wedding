@@ -8143,6 +8143,11 @@ react-scripts@5.0.1:
   optionalDependencies:
     fsevents "^2.3.2"
 
+react-simply-carousel@^9.1.6:
+  version "9.1.6"
+  resolved "https://registry.yarnpkg.com/react-simply-carousel/-/react-simply-carousel-9.1.6.tgz#75d531552bd600aa38b17bf28ccc880ea36bb475"
+  integrity sha512-7V5vhHbg9IvRgvaEC3RbAqZs5e+a+Ujkr08e0ZV22gzQY+Vsq7DnYXnTZsEDyQ1EnOkO2TnuqxAEhrm/1XviBw==
+
 react@^18.2.0:
   version "18.3.1"
   resolved "https://registry.yarnpkg.com/react/-/react-18.3.1.tgz#49ab892009c53933625bd16b2533fc754cab2891"

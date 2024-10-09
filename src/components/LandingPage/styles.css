@@ -1,7 +1,11 @@
 .screen-landing-page {
   overflow: hidden;
-  height: calc(115vh - 40px);
+  height: calc(115vh - 50px);
   position: relative;
+
+  @media (min-width: 768px) {
+    height: 118vh;
+  }
 
   .plane-wrapper {
     position: absolute;
@@ -22,7 +26,7 @@
   }
 
   .images-wrapper {
-    height: 125vh;
+    height: 131vh;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -31,20 +35,15 @@
     gap: 4px;
     background: #777;
 
-    .img-wrapper {
-      overflow: hidden;
+    img {
+      width: min(150px, calc(100vw / 4 - 3px));
+      filter: brightness(0.35);
+      /* transition: filter 1s ease-in; */
+      position: relative;
 
-      img {
-        width: calc(100vw / 4 - 3px);
-        max-width: 250px;
-        filter: brightness(0.35);
-        /* transition: filter 1s ease-in; */
-        position: relative;
-
-        &.highlighted {
-          transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-          filter: brightness(0.85);
-        }
+      &.highlighted {
+        transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        filter: brightness(0.85);
       }
     }
   }

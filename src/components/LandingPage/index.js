@@ -5,7 +5,7 @@ import { WITH_ANIMATIONS } from '../../App';
 
 let intervalRef;
 
-const NUMBER_OF_IMAGES = 30;
+const NUMBER_OF_IMAGES = 33;
 export default function LandingPage() {
   // randomly select an image and remove all transforms from it, using react
   // state to force re-render
@@ -56,15 +56,13 @@ export default function LandingPage() {
           </div>
         </div>
         <div className="images-wrapper">
-          {new Array(NUMBER_OF_IMAGES).fill(null).map((_, index) => (
-            <div className="img-wrapper">
-              <img
-                key={index}
-                src={`images/landing/image${index + 1}.jpeg`}
-                alt="Iuliu & Gabriela Travelling"
-                className={selectedImageIndex === index ? 'highlighted' : ''}
-              />
-            </div>
+          {new Array(NUMBER_OF_IMAGES + 15).fill(null).map((_, index) => (
+            <img
+              key={index}
+              src={`images/landing/image${(index % NUMBER_OF_IMAGES) + 1}.jpeg`}
+              alt="Iuliu & Gabriela Travelling"
+              className={selectedImageIndex === index ? 'highlighted' : ''}
+            />
           ))}
         </div>
         <div className="bottom-gradient"></div>

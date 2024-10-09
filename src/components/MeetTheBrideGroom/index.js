@@ -13,7 +13,6 @@ export default function MeetTheBridegroom() {
         <div className="img-wrapper">
           <div className="top-gradient"></div>
           <Carousel
-            preventScrollOnSwipe
             swipeTreshold={60}
             activeSlideIndex={activeSlide}
             onRequestChange={setActiveSlide}
@@ -22,9 +21,10 @@ export default function MeetTheBridegroom() {
             centerMode
             backwardBtnProps={{ style: { display: 'none' } }}
             forwardBtnProps={{ style: { display: 'none' } }}
+            
           >
-            {Array.from({ length: 10 }).map((item, index) => (
-              <img key={index} src={`images/carousel/${(index % 3) + 1}.jpg`} alt="The bridegroom" />
+            {Array.from({ length: 6 }).map((item, index) => (
+              <img key={index} src={`images/carousel/${index + 1}.jpg`} alt="The bridegroom" />
             ))}
           </Carousel>
         </div>

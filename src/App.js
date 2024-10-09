@@ -11,7 +11,7 @@ import CountdownTimer from './components/CountdownTimer';
 import Summary from './components/Summary';
 import LetsParty from './components/LetsParty';
 
-export const WITH_ANIMATIONS = true;
+export const WITH_ANIMATIONS = false;
 
 export default function App() {
   return (
@@ -28,7 +28,7 @@ export default function App() {
         <span className="left-until">left until...</span>
         <Summary />
         <LetsParty />
-        <span style={{ marginTop: 40, display: 'inline-block', fontSize: 12 }}>Developed with 💛 by the groom. <br/>Creative direction by the bride.</span>
+        <span style={{ marginTop: 40, display: 'inline-block', fontSize: 12 }}>Developed with 💛 by the groom. <br/>Creative inspiration by the bride.</span>
       </CollapsedScreens>
     </div>
   );

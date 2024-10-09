@@ -36,7 +36,7 @@ export default function SaveTheDate() {
 
   // add scroll listener, when it's more than 250px, set state isFlipped to true
   const handleScroll = async (event) => {
-    if (shouldPauseScrollListening) {
+    if (shouldPauseScrollListening || !WITH_ANIMATIONS) {
       return;
     }
 

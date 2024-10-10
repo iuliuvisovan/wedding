@@ -29,7 +29,9 @@ export default function MeetTheBridegroom() {
         <div
           className="img-wrapper"
           onTouchStart={() => {
-            window.clearInterval(randomInterval.current);
+            setTimeout(() => {
+              window.clearInterval(randomInterval.current);
+            }, 3000);
           }}
           onMouseDown={() => {
             window.clearInterval(randomInterval.current);

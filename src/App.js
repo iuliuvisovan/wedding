@@ -26,11 +26,11 @@ export default function App() {
         <MeetTheBrideGroom />
         <MeetTheGodparents />
         <AndTheParents />
+        <LetsParty />
         <CountdownTimer />
         <span className="left-until">left until...</span>
         <Summary />
-        <LetsParty />
-        <span style={{ display: 'inline-block', fontSize: 12, lineHeight: '20px' }}>
+        <span style={{ display: 'inline-block', fontSize: 12, lineHeight: '20px', marginTop: 80, marginBottom: 24 }}>
           Developed with 💛 by the groom <br />
           Creative inspiration by the bride
         </span>

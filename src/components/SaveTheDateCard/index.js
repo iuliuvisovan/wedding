@@ -9,8 +9,8 @@ let confettiInterval;
 let showCardTimeout;
 let shouldPauseScrollListening = false;
 
-const AUTO_FLIP_POINT = window.innerHeight / 1.8;
-const FLIP_UNDO_POINT = AUTO_FLIP_POINT + 270;
+const AUTO_FLIP_POINT = window.innerHeight / 1.88;
+const FLIP_UNDO_POINT = AUTO_FLIP_POINT + 290;
 const CONFETTI_TIMEOUT = 1000;
 
 export default function SaveTheDate() {
@@ -66,7 +66,7 @@ export default function SaveTheDate() {
         setIsFlipped(true);
         setShouldHideBecause(true);
         shouldPauseScrollListening = false;
-      }, 2500);
+      }, 1500);
     }
   };
 

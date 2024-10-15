@@ -9,8 +9,8 @@ let confettiInterval;
 let showCardTimeout;
 let shouldPauseScrollListening = false;
 
-const AUTO_FLIP_POINT = window.innerHeight / 1.88;
-const FLIP_UNDO_POINT = AUTO_FLIP_POINT + 290;
+const AUTO_FLIP_POINT = window.innerHeight > 768 ? 450 : 270;
+const FLIP_UNDO_POINT = AUTO_FLIP_POINT + 280;
 const CONFETTI_TIMEOUT = 1000;
 
 export default function SaveTheDate() {
@@ -47,7 +47,7 @@ export default function SaveTheDate() {
   };
 
   const maybeHideCard = () => {
-    if (window.scrollY > FLIP_UNDO_POINT) {
+    if (window.scrollY > FLIP_UNDO_POINT && window.areCollapsedScreenShown) {
       setIsPastRevertOffset(true);
       setIsFlipped(false);
       shouldPauseScrollListening = true;
@@ -56,7 +56,7 @@ export default function SaveTheDate() {
   };
 
   const maybeShowCard = () => {
-    if (window.scrollY > AUTO_FLIP_POINT && !isFlipped) {
+    if (window.scrollY > AUTO_FLIP_POINT) {
       if (showCardTimeout) {
         return;
       }
@@ -66,7 +66,7 @@ export default function SaveTheDate() {
         setIsFlipped(true);
         setShouldHideBecause(true);
         shouldPauseScrollListening = false;
-      }, 1500);
+      }, 1300);
     }
   };
 
@@ -88,7 +88,7 @@ export default function SaveTheDate() {
         setTimeout(() => {
           window.showCollapsedScreens();
           window.areCollapsedScreenShown = true;
-        }, 4500);
+        }, 2000);
       }
     } else {
       setShowsConfetti(false);

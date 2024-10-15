@@ -88,7 +88,7 @@ export default function SaveTheDate() {
         setTimeout(() => {
           window.showCollapsedScreens();
           window.areCollapsedScreenShown = true;
-        }, 2000);
+        }, 1500);
       }
     } else {
       setShowsConfetti(false);

@@ -11,7 +11,7 @@ export default function Schedule() {
         <div className="schedule-item">
           <div className="hour">
             <HeartIcon />
-            <span>13:00</span>
+            <span>12:40</span>
           </div>
           <div className="event-info">
             <span className="title">Civil Ceremony</span>
